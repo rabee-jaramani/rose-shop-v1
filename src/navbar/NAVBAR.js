@@ -16,8 +16,9 @@ export default function NAVBAR() {
         <div className="search">Search</div>
         <div className="login">Log In</div>
         <div className="cart">
-            <i className="fas fa-shopping-cart"></i>
-            <div className="cart-counter">5</div>
+        <div className="cart-counter">5</div>
+        <i className="fas fa-shopping-cart"></i>
+            
         </div>
     </div>
     <div className="navbar-mobile">
@@ -31,8 +32,8 @@ export default function NAVBAR() {
         <div className="search-m">Search</div>
         <div className="login-m">Log In</div>
         <div className="cart-m">
-            <i className="fas fa-shopping-cart"></i>
             <div className="cart-counter">5</div>
+            <i className="fas fa-shopping-cart"></i>
         </div>
     </div>
         </>

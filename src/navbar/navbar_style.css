@@ -23,13 +23,17 @@
     justify-content: center;
     border-radius: 0 0 50px 0;
 }
+.cart{
+    margin-top: -10px !important;
+}
 .cart i{
     font-size: 30px;
-    margin-left: 5px;
+    margin-left: 0;
+    margin-top: -10px;
 }
 .cart-counter{
     font-size: 20px;
-    margin-left: 10px;
+    margin-left: 40px;
 }
 .home:hover,.about:hover,.search:hover,.events:hover,.login:hover{
 background-color: rgb(204, 204, 204);
@@ -111,8 +115,15 @@ border-bottom: 2px solid var(--gold_color);
         left: 230px !important;
     }
     .cart-m{
-        bottom: 20px !important;
+        bottom: 30px !important;
         left: 320px !important;
+    }
+    .cart i{
+        margin-left: -20px;
+    }
+    .cart-counter{
+        font-size: 20px;
+        margin-left: 25px;
     }
 }
 @media(max-width:418px){
