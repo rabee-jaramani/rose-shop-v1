@@ -7,6 +7,7 @@ import NAVBAR from './navbar/NAVBAR';
 function App() {
   return (
     <div className="App">
+      AAAAAAAAAAAAAAAAAAAa
       <NAVBAR/>
       <CARD image={rose}/>
     </div>
