@@ -1,7 +1,6 @@
 import React from 'react'
-import {useState} from 'react'
 import { $ }  from 'react-jquery-plugin'
-import {add_pack_to_cart} from '../cart/CART'
+
 export default function CARD(props) {
 
 
