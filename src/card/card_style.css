@@ -30,6 +30,12 @@ body{
     margin-top: -5px;
     border-radius: 0 0 0 5px;
 }
+.plus{
+    width: 20px;
+}
+.minus{
+    width: 20px;
+}
 .add-to-cart{
     display: flex;
     width: 350px;

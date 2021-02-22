@@ -1,0 +1,108 @@
+
+body{
+    background-color: gray;
+}
+.disable{
+    pointer-events: none;
+}
+.show{
+    display: block !important;
+}
+.img{
+    width: 100%;
+    height: 350px;
+    background-color: burlywood;
+}
+.pack{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 35px;
+    top: -250px;
+}
+.pack i{
+    font-size: 35px;
+    color: var(--main_color);
+}
+.pack-remove{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 35px;
+    bottom: 0;
+    display: none;
+}
+.pack-remove i{
+    font-size: 35px;
+    color: var(--main_color);
+}
+.cart-main{
+    width: 80px;
+    height: 80px;
+    background-color: var(--main_color);
+    border-radius: 50%;
+    position: fixed;
+    right: 0;
+    top: 90%;
+    cursor: pointer;
+    display: none;
+}
+.cart-main i{
+    color: honeydew;
+    font-size: 30px;
+    margin-left: 15px;
+}
+.cart-main .counter{
+    color: white;
+    font-size: 25px;
+    margin-left: 38px;
+}
+.pack-animation{
+    animation-name: add-pack;
+    animation-duration: 2s; 
+}
+.pack-animation-remove{
+    animation-name: remove-pack;
+    animation-duration: 2s; 
+}
+.cart-animation{
+    animation: cart-animation 1s;
+}
+@keyframes add-pack{
+    0%{
+        top: 0 !important;
+        transform: rotate(360deg);
+    }
+    50%{
+        top: 40%;  
+    }
+    100%{
+        top: 80%;
+    }
+}
+@keyframes remove-pack{
+    0%{
+        top: 90vh;
+        display: block;
+        transform: rotate(360deg);
+    }
+    50%{
+        top: 50vh;  
+    }
+    100%{
+        top: 0;
+    }
+}
+@keyframes cart-animation{
+    0%{
+        transform: scale(1.1,1.1);
+        color: rgb(255, 217, 1);
+    }
+    50%{
+        transform: scale(1.8,1.8);
+        color: rgb(255, 108, 165);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
