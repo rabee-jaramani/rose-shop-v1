@@ -1,11 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { $ }  from 'react-jquery-plugin'
 
 export default function CARD(props) {
+    const [card_counter, setcard_counter] = useState(0);
     function add_pack_to_cart(){
         $('.btn-addtocart').addClass('disable');
         $('.pack').addClass('pack-animation');
         $('.cart-main').addClass('show');
+        setcard_counter(card_counter+1);
         setTimeout(dely_item,2000);
     }
     function dely_item(){
@@ -20,9 +22,15 @@ export default function CARD(props) {
 
     function remove_pack_from_cart(){
         if(props.counter===0){
-            $('.cart-main').removeClass('show');
-            $('.btn-removefromcart').removeClass('disable');
-        }else{
+            alert('cart is empty');
+        }
+        else
+        if(card_counter===0){
+            alert('this item not in the cart');
+            }
+        
+        else{
+        setcard_counter(card_counter-1);
         $('.btn-removefromcart').addClass('disable');
         $('.pack').addClass('pack-animation-remove');
         $('.cart-icon').addClass('cart-animation');
@@ -50,7 +58,7 @@ export default function CARD(props) {
             <div className="plus btn-addtocart" >
                 <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
             </div>
-            <div className="counter">{props.counter}</div>
+            <div className="counter">{card_counter}</div>
             <div className="minus btn-removefromcart" >
                 <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
             </div>
