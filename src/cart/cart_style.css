@@ -16,13 +16,14 @@ body{
 .pack{
     width: 20px;
     height: 20px;
-    position: absolute;
+    position: fixed;
     right: 35px;
-    top: -250px;
+    top: -50px;
+    z-index: 10;
 }
 .pack i{
     font-size: 35px;
-    color: var(--main_color);
+    color: var(--gold_color);
 }
 .pack-remove{
     width: 20px;
@@ -37,13 +38,13 @@ body{
     color: var(--main_color);
 }
 .cart-main{
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background-color: var(--main_color);
     border-radius: 50%;
     position: fixed;
     right: 0;
-    top: 90%;
+    top: 80%;
     cursor: pointer;
     display: none;
 }
@@ -82,7 +83,7 @@ body{
 }
 @keyframes remove-pack{
     0%{
-        top: 90vh;
+        top: 80vh;
         display: block;
         transform: rotate(360deg);
     }
@@ -90,7 +91,7 @@ body{
         top: 50vh;  
     }
     100%{
-        top: 0;
+        top: -50px;
     }
 }
 @keyframes cart-animation{
@@ -99,10 +100,40 @@ body{
         color: rgb(255, 217, 1);
     }
     50%{
-        transform: scale(1.8,1.8);
+        transform: scale(1.6,1.6);
         color: rgb(255, 108, 165);
     }
     100%{
         transform: scale(1,1);
+       
     }
+}
+@media(max-width:600px){
+    .cart-main{
+        width: 50px;
+        height: 50px;
+    }
+    .cart-main i{
+        color: honeydew;
+        font-size: 25px !important;
+        margin-left: 8px;
+        margin-bottom: 5px;
+    }
+    .cart-main >.counter{
+        margin: 0 !important;
+        padding: 0 !important;
+        margin-left: 18px !important;
+        font-size: 18px;
+    }
+    .pack{
+        width: 17px !important;
+        height: 17px !important;
+        position: absolute;
+        right: 25px;
+        top: -250px;
+    }
+    .pack i{
+        font-size: 25px;
+    }
+
 }

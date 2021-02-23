@@ -2,8 +2,6 @@ import React from 'react'
 import { $ }  from 'react-jquery-plugin'
 
 export default function CARD(props) {
-
-
     function add_pack_to_cart(){
         $('.btn-addtocart').addClass('disable');
         $('.pack').addClass('pack-animation');
@@ -40,7 +38,6 @@ export default function CARD(props) {
         $('.cart-main').removeClass('cart-animation'); 
     }
 
-
     return (
         <>
         <div className="card">
@@ -48,22 +45,20 @@ export default function CARD(props) {
         <div className="card-details">
         <div className="card-title">Red Roses</div>
         <div className="available">In stock</div>
-        <div className="add-to-cart">
-            <div className="price">150 AED</div>
-            <div className="plus-counter-minus">
-                <div className="plus btn-addtocart" >
-                    <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
-                </div>
-                <div className="counter">{props.counter}</div>
-                <div className="minus btn-removefromcart" >
-                    <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
-                </div>
+        <div className="price">150 AED</div>
+        <div className="plus-counter-minus">
+            <div className="plus btn-addtocart" >
+                <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
             </div>
-            
-        </div>
-        <div className="more-info"><i className="fas fa-info i-card"></i></div>
+            <div className="counter">{props.counter}</div>
+            <div className="minus btn-removefromcart" >
+                <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
+            </div>
+        </div>      
         
+        {/* <div className="more-info"><i className="fas fa-info i-card"></i></div> */}
     </div>
+    <div className='card-more-info'><i class="far fa-question-circle"></i></div>
     </div>
     </>
     )

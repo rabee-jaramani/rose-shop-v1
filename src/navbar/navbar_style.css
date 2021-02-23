@@ -10,6 +10,7 @@
     top: 0;
     padding-top: 10px;
     border-radius: 0 0 0 75px;
+    z-index: 10;
 }
 .navbar > div{
     color: rgb(204, 204, 204);
@@ -43,6 +44,7 @@ border-bottom: 2px solid var(--gold_color);
 }
 .navbar-mobile{
     display: none;
+    z-index: 10;
 }
 @media(max-width:600px){
  
