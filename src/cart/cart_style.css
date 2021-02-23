@@ -75,10 +75,10 @@ body{
         transform: rotate(360deg);
     }
     50%{
-        top: 40%;  
+        top: 40vh;  
     }
     100%{
-        top: 80%;
+        top: 80vh;
     }
 }
 @keyframes remove-pack{
@@ -88,7 +88,7 @@ body{
         transform: rotate(360deg);
     }
     50%{
-        top: 50vh;  
+        top: 40vh;  
     }
     100%{
         top: -50px;
@@ -128,7 +128,6 @@ body{
     .pack{
         width: 17px !important;
         height: 17px !important;
-        position: absolute;
         right: 25px;
         top: -250px;
     }

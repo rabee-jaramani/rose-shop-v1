@@ -126,8 +126,8 @@ transform: scale(1.05,1.05);
 }
 @media(max-width:450px){
     .card{
-        width: 150px;
-        height: 200px;
+        width: 180px;
+        height: 230px;
 
       }
       .card-title,.available,.price,.plus i,.minus i{
