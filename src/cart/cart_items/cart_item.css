@@ -1,0 +1,12 @@
+.cart-item{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.item-name,.item-price,.item-qty{
+    color: white;
+    font-size: 15px;
+
+}

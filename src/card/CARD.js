@@ -1,23 +1,43 @@
 import React,{useState} from 'react'
 import { $ }  from 'react-jquery-plugin'
-
 export default function CARD(props) {
-    const [card_counter, setcard_counter] = useState(0);
+  
+     const [card_counter, setcard_counter] = useState(0);
+    
     function add_pack_to_cart(){
+        let newitem={
+            prod_name:props.item_name,
+            prod_price:props.item_price,
+            prod_qty:card_counter+1
+        };
+        //check if the item is already in the cart
+        if(props.products.find(x=> x.prod_name===props.item_name)){
+            var total=props.total;
+            let list=props.products;
+            var index=props.products.findIndex(x=> x.prod_name===props.item_name);
+            list[index].prod_qty=list[index].prod_qty+1;
+            total=total+list[index].prod_price;
+            props.add_existing_item_tocart(list,total);
+        }
+        else{
+        props.add_new_item_tocart(newitem);
+    }
         $('.btn-addtocart').addClass('disable');
         $('.pack').addClass('pack-animation');
         $('.cart-main').addClass('show');
         setcard_counter(card_counter+1);
         setTimeout(dely_item,2000);
     }
+
     function dely_item(){
         $('.pack').removeClass('pack-animation');
         $('.btn-addtocart').removeClass('disable');
-        props.setcounter(props.counter+1);
+        // props.setcounter(props.counter+1);
         $('.cart-icon').addClass('cart-animation');
         $('.cart-main').addClass('cart-animation');
         setTimeout(()=>{$('.cart-icon').removeClass('cart-animation')},1000);
-        setTimeout(()=>{$('.cart-main').removeClass('cart-animation')},1000);   
+        setTimeout(()=>{$('.cart-main').removeClass('cart-animation')},1000);  
+        
     }
 
     function remove_pack_from_cart(){
@@ -51,9 +71,9 @@ export default function CARD(props) {
         <div className="card">
         <img src={props.image} alt=""/>
         <div className="card-details">
-        <div className="card-title">Red Roses</div>
+        <div className="card-title">{props.item_name}</div>
         <div className="available">In stock</div>
-        <div className="price">150 AED</div>
+        <div className="price">{props.item_price} AED</div>
         <div className="plus-counter-minus">
             <div className="plus btn-addtocart" >
                 <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
@@ -66,7 +86,7 @@ export default function CARD(props) {
         
         {/* <div className="more-info"><i className="fas fa-info i-card"></i></div> */}
     </div>
-    <div className='card-more-info'><i class="far fa-question-circle"></i></div>
+    <div className='card-more-info'><i className="far fa-question-circle"></i></div>
     </div>
     </>
     )

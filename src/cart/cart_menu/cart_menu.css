@@ -1,0 +1,46 @@
+.cart-menu{
+    width: 400px;
+    height: 500px;
+    background:linear-gradient(to bottom,rgb(100, 31, 71),rgb(197, 0, 115));
+    position: fixed;
+    left: 40%;
+    top: -80%;
+    border-radius: 10px;
+    transition: .5s;
+}
+.show-cart-menu{
+    top: 10%;
+}
+.cart-title{
+    position: absolute;
+    right: 45%;
+    color: white;
+    font-size: 25px;
+}
+.total-title{
+    position: absolute;
+    left: 110px;
+    top: 40px;
+    color: white;
+    font-size: 20px;
+}
+.total-aed{
+    position: absolute;
+    right: 110px;
+    top: 40px;
+    color: white;
+    font-size: 20px;
+}
+.items-title{
+    position: absolute;
+    right: 42%;
+    top: 90px;
+    color: white;
+    font-size: 25px;
+}
+.cart-details{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 130px;
+}
