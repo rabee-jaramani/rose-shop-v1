@@ -1,4 +1,5 @@
 import React from 'react'
+
 import CART_ITEM from '../cart_items/CART_ITEM'
 
 export default function CART_MENU(props) {
@@ -13,9 +14,13 @@ export default function CART_MENU(props) {
                     <div className='cart-details'>
                         {props.products.map((product)=>(
                             <CART_ITEM
+                            add_existing_item_tocart={props.add_existing_item_tocart}
                             name={product.prod_name}
                             price={product.prod_price}
                             qty={product.prod_qty}
+                            products={props.products}
+                            total={props.total}
+                            inc_counter={props.inc_counter}
                             />
                         ))}
                         

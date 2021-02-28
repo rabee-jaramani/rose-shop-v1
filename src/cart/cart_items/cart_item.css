@@ -2,11 +2,30 @@
     width: 90%;
     margin-left: 5%;
     display: flex;
-    justify-content: space-between;
+    position: relative;
     flex-direction: row;
 }
 .item-name,.item-price,.item-qty{
     color: white;
     font-size: 15px;
+    position: absolute;
+}
+.item-name{
+    left: 10px;
+}
 
+.item-price{
+    left: 150px;
+}
+
+.item-qty{
+    left: 200px;
+}
+.cart-item >.plus> i{
+    position: absolute;
+    left: 240px;
+}
+.cart-item >.minus> i{
+    position: relative;
+    left: 280px;
 }

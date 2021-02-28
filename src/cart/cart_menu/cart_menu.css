@@ -1,15 +1,20 @@
 .cart-menu{
-    width: 400px;
-    height: 500px;
-    background:linear-gradient(to bottom,rgb(100, 31, 71),rgb(197, 0, 115));
+    width: 5px;
+    height: 5px;
+    background:linear-gradient(to bottom,rgb(242, 201, 132),rgb(197, 0, 115));
     position: fixed;
-    left: 40%;
-    top: -80%;
+    left: 150%;
+    top: -100%;
     border-radius: 10px;
-    transition: .5s;
+    transition: .9s;
 }
 .show-cart-menu{
-    top: 10%;
+    left: 50%;
+    top: 50%;
+    width: 350px;
+    height: 500px;
+    transform: translate(-50%,-50%);
+    transition: .9s;
 }
 .cart-title{
     position: absolute;
@@ -19,10 +24,11 @@
 }
 .total-title{
     position: absolute;
-    left: 110px;
+    left: 100px;
     top: 40px;
     color: white;
     font-size: 20px;
+    margin-right: 10px;
 }
 .total-aed{
     position: absolute;

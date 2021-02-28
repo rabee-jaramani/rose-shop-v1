@@ -18,18 +18,21 @@ export default function CARD(props) {
             list[index].prod_qty=list[index].prod_qty+1;
             total=total+list[index].prod_price;
             props.add_existing_item_tocart(list,total);
+            setcard_counter(card_counter+1);
         }
         else{
         props.add_new_item_tocart(newitem);
+        setcard_counter(card_counter+1);
     }
         $('.btn-addtocart').addClass('disable');
         $('.pack').addClass('pack-animation');
         $('.cart-main').addClass('show');
-        setcard_counter(card_counter+1);
+        
         setTimeout(dely_item,2000);
     }
 
     function dely_item(){
+        props.inc_counter();
         $('.pack').removeClass('pack-animation');
         $('.btn-addtocart').removeClass('disable');
         // props.setcounter(props.counter+1);
@@ -72,13 +75,13 @@ export default function CARD(props) {
         <img src={props.image} alt=""/>
         <div className="card-details">
         <div className="card-title">{props.item_name}</div>
-        <div className="available">In stock</div>
+        <div className="available">Available</div>
         <div className="price">{props.item_price} AED</div>
         <div className="plus-counter-minus">
             <div className="plus btn-addtocart" >
                 <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
             </div>
-            <div className="counter">{card_counter}</div>
+            <div className="counter"></div>
             <div className="minus btn-removefromcart" >
                 <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
             </div>

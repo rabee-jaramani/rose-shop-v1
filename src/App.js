@@ -21,12 +21,16 @@ class App extends React.Component {
       total:0
     }
   }
+  inc_counter(){
+    this.setState({
+      counter:this.state.counter+1
+    });
+  }
   add_new_item_tocart(item) {
     
     this.setState(prevState=>({
       products:[...prevState.products,item],
       total:prevState.total+item.prod_price,
-      counter:this.state.counter+1
     }));
     console.log('adding same item >> Total is >> '+this.state.total);
   }
@@ -34,7 +38,6 @@ class App extends React.Component {
     this.setState(prevState=>({
       total:total,
       products:list,
-      counter:prevState.counter+1
     }))
   }
   render() {
@@ -49,12 +52,14 @@ class App extends React.Component {
       add_existing_item_tocart={this.add_existing_item_tocart.bind(this)}
       add_new_item_tocart={this.add_new_item_tocart.bind(this)}
       total={this.state.total}
+      inc_counter={this.inc_counter.bind(this)}
       />
       <CART counter={this.state.counter}/>
       <CART_MENU
-        // setproducts={setproducts}
+        add_existing_item_tocart={this.add_existing_item_tocart.bind(this)}
         products={this.state.products}
         total={this.state.total}
+        inc_counter={this.inc_counter.bind(this)}
       />
     </div>
       }

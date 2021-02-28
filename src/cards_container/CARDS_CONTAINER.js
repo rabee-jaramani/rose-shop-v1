@@ -15,7 +15,7 @@ export default function CARDS_CONTAINER(props) {
                   item_price={item.item_price}
                   item_qty={0}
                   image={item.image}
-                  // counter={props.counter}
+                  inc_counter={props.inc_counter}
                   // setcounter={props.setcounter}
                   // setproducts={props.setproducts}
                   products={props.products}
