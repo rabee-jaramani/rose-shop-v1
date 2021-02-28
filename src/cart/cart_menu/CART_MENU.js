@@ -3,10 +3,14 @@ import React from 'react'
 import CART_ITEM from '../cart_items/CART_ITEM'
 
 export default function CART_MENU(props) {
+    function close_cart_menu() {
+        document.querySelector('.cart-menu').classList.remove('show-cart-menu');
+    }
 
     return (
         <>
              <div className='cart-menu' >
+                 <div className='close-icon' onClick={close_cart_menu}><i class="fas fa-times"></i></div>
                 <div className='cart-title'>Cart</div>
                 <div className='total-title'>Total:</div>
                 <div className='total-aed'>{props.total} AED</div>
@@ -25,7 +29,10 @@ export default function CART_MENU(props) {
                         ))}
                         
                     </div>
-                
+                <div className='buttons-div'>
+                    <div className='proceed-btn'>Proceed</div>
+                    <div className='cancel-btn'>Cancel</div>
+                </div>
             </div>
         </>
     )

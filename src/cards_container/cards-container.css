@@ -1,6 +1,6 @@
 .cards-container{
    margin-left: 5% !important;
-   margin-top: 200px;
+   margin-top: 1000px;
     width: 90%;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(358px, 1fr) );

@@ -1,6 +1,9 @@
 import React from 'react'
 
 export default function NAVBAR(props) {
+    function close_cart_menu() {
+        document.querySelector('.cart-menu').classList.toggle('show-cart-menu');
+    }
     function menu_bars_clicked(){
         document.querySelector('.navbar-mobile').classList.toggle('navbar-mobile-clicked');
         document.querySelector('.fa-bars').classList.toggle('hide');
@@ -15,7 +18,7 @@ export default function NAVBAR(props) {
         <div className="events">Events</div>
         <div className="search">Search</div>
         <div className="login">Log In</div>
-        <div className="cart">
+        <div className="cart" onClick={close_cart_menu}>
         <div className="cart-counter">{props.counter}</div>
         <i className="fas fa-shopping-cart"></i>
             

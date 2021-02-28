@@ -1,19 +1,30 @@
 .cart-menu{
-    width: 5px;
-    height: 5px;
+    width: 20px;
+    height: 20px;
     background:linear-gradient(to bottom,rgb(242, 201, 132),rgb(197, 0, 115));
     position: fixed;
     left: 150%;
-    top: -100%;
-    border-radius: 10px;
+    top: 80%;
+    border-radius: 50%;
     transition: .9s;
+}
+.close-icon{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+.close-icon i{
+    color: white;
+    font-size: 30px;
 }
 .show-cart-menu{
     left: 50%;
     top: 50%;
     width: 350px;
-    height: 500px;
+    height: 400px;
     transform: translate(-50%,-50%);
+    border-radius: 10px;
     transition: .9s;
 }
 .cart-title{
@@ -36,6 +47,7 @@
     top: 40px;
     color: white;
     font-size: 20px;
+    background: rgb(255, 255, 255,.2);
 }
 .items-title{
     position: absolute;
@@ -49,4 +61,29 @@
     display: flex;
     flex-direction: column;
     top: 130px;
+    background-color: rgb(255, 255, 254,.3);
+}
+.buttons-div{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.buttons-div div{
+    background-color: white;
+    width: 100px;
+    text-align: center;
+    padding: 8px 0;
+    color: rgb(197, 0, 115);
+    border-radius: 5px;
+    box-shadow: rgb(0, 0, 0) 1px 1px 2px 0px;
+    transition: ease-in-out 0.3s;
+}
+.buttons-div div:hover{
+    background-color: rgb(230, 204, 134);
+    transform: translateY(-3px);
+    box-shadow: black 3px 5px 8px 0px;
+
 }
