@@ -24,7 +24,7 @@ body{
 }
 .pack i{
     font-size: 35px;
-    color: var(--gold_color);
+    color: var(--main_color);
 }
 .pack-remove{
     width: 20px;
