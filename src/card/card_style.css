@@ -138,11 +138,11 @@ transform: scale(1.05,1.05);
     }
 }
 @media(max-width:450px){
-    /* .card{
-        width: 42vw;
-        height: 50.6vw;
+    .card{
+        width: 43vw;
+        height: 53vw;
 
-      } */
+      }
       .card-title,.available,.not-available,.limited-stock,.price,.plus i,.minus i{
         font-size: 3vw;
     }

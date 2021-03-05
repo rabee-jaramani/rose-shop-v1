@@ -3,7 +3,7 @@
 }
 
 .logo img{
-    width: 7vw;
+    width: 10vw;
     margin-left: 1vw;
     margin-top: 3vw;
     transition: 1s;
@@ -82,4 +82,14 @@
 .w8{
 
     animation: flash 1s infinite;
+}
+@media(max-width:600px){
+    .header div{
+      
+        font-size: 3vw;
+    }
+    .logo img{
+        width: 14vw;
+       
+    }
 }

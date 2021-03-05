@@ -23,8 +23,3 @@
         grid-auto-rows: minmax(220px, 270px);
     }
 }
-@media(max-width:395px){
-    .cards-container{
-        margin-left: 1% !important;
-    }
-}
