@@ -24,8 +24,11 @@
 .cart-item >.plus> i{
     position: absolute;
     left: 240px;
+    font-size: 17px;
+    margin-top: .1vw;
 }
 .cart-item >.minus> i{
     position: relative;
-    left: 280px;
+    left: 275px;
+    font-size: 17px;
 }

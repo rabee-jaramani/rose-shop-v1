@@ -32,7 +32,7 @@ export default function CART_MENU(props) {
                     </div>
                 <div className='buttons-div'>
                     <div className='proceed-btn'>Proceed</div>
-                    <div className='cancel-btn'>Cancel</div>
+                    <div className='cancel-btn' onClick={close_cart_menu}>Cancel</div>
                 </div>
             </div>
         </>
