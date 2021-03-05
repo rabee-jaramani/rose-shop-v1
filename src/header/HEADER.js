@@ -5,7 +5,7 @@ export default function HEADER() {
         <>
             {/* Love and a red rose can’t be hid. */}
             <div className='header'>
-                <div className='logo'><img src={logo}></img></div>
+                <div className='logo'><img src={logo} alt='LOGO'></img></div>
                 <div className='words'>
                     
             <div className='w1 '>Always</div>
