@@ -7,22 +7,22 @@ body{
     background-size: cover;
 }
 .navbar{
-    width: 83px;
-    height: 310px;
+    width: 4vw;
+    height: 16vw;
     background-color: var(--main_color);
     position: fixed;
     right: 0;
     top: 0;
-    padding-top: 10px;
+    padding-top: .7vw;
     border-radius: 0 0 0 75px;
     z-index: 10;
 }
 .navbar > div{
     color: rgb(204, 204, 204);
-    font-size: 21px;
-    width:70px ;
-    height: 35px;
-    margin: 10px auto;
+    font-size: 1vw;
+    width:4vw ;
+    height: 1.8vw;
+    margin: .5vw auto;
     cursor: pointer;
     transition: ease .5s;
     text-align: center;
@@ -30,16 +30,16 @@ body{
     border-radius: 0 0 50px 0;
 }
 .cart{
-    margin-top: -10px !important;
+    margin-top: -.5vw !important;
 }
 .cart i{
-    font-size: 30px;
+    font-size: 1.5vw;
     margin-left: 0;
-    margin-top: -10px;
+    margin-top: -.5vw;
 }
 .cart-counter{
-    font-size: 20px;
-    margin-left: 40px;
+    font-size: 1vw;
+    margin-left: 2.5vw;
 }
 .home:hover,.about:hover,.search:hover,.events:hover,.login:hover{
 background-color: rgb(204, 204, 204);
@@ -69,8 +69,8 @@ border-bottom: 2px solid var(--gold_color);
         position: fixed;
         background-color: var(--main_color);
         border-radius: 100px;
-        right: -120px;
-        top: -120px;
+        right: -140px;
+        top: -140px;
         transition: all 1s;
     }
     .menu-bars{
@@ -84,7 +84,11 @@ border-bottom: 2px solid var(--gold_color);
     }
     .menu-bars i,.menu-close-bars i{
         color: white;
-        font-size: 30px;
+        font-size: 4vw !important;
+    }
+    .menu-bars i{
+        margin-top: 3vw;
+        margin-left: -1vw;
     }
     .navbar-mobile-clicked{
         width: 800px;
@@ -135,12 +139,12 @@ border-bottom: 2px solid var(--gold_color);
 }
 @media(max-width:418px){
     .navbar-mobile{
-        right: -130px;
-        top: -130px;
+        right: -145px;
+        top: -145px;
     }
     .fa-bars{
-        margin-left: 0px !important;
-        margin-top: 6px !important;
+        margin-left: -1vw !important;
+        margin-top: 4.5vw !important;
     }
     .navbar-mobile-clicked{
         width: 600px;
@@ -177,5 +181,10 @@ border-bottom: 2px solid var(--gold_color);
     .menu-close-bars{
         margin-top: 307.5px !important;
         margin-left: 270px !important;
+    }
+}
+@media(max-width:355px){
+    .fa-bars{
+        margin-top: 5.5vw !important;
     }
 }

@@ -25,6 +25,7 @@ export default function CART_MENU(props) {
                             products={props.products}
                             total={props.total}
                             inc_counter={props.inc_counter}
+                            dec_counter={props.dec_counter}
                             />
                         ))}
                         

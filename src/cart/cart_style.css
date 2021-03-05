@@ -39,8 +39,8 @@ body{
     color: var(--main_color);
 }
 .cart-main{
-    width: 70px;
-    height: 70px;
+    width: 4vw;
+    height: 4vw;
     background-color: var(--main_color);
     border-radius: 50%;
     position: fixed;
@@ -51,13 +51,13 @@ body{
 }
 .cart-main i{
     color: honeydew;
-    font-size: 30px;
-    margin-left: 15px;
+    font-size: 1.8vw;
+    margin-left: .5vw;
 }
 .cart-main .counter{
     color: white;
-    font-size: 25px;
-    margin-left: 38px;
+    font-size: 1.2vw;
+    margin-left: 1.5vw;
 }
 .pack-animation{
     animation-name: add-pack;
@@ -111,20 +111,20 @@ body{
 }
 @media(max-width:600px){
     .cart-main{
-        width: 50px;
-        height: 50px;
+        width: 8vw;
+        height: 8vw;
     }
     .cart-main i{
         color: honeydew;
-        font-size: 25px !important;
-        margin-left: 8px;
-        margin-bottom: 5px;
+        font-size: 4vw !important;
+        margin-left: 1.5vw;
+        margin-bottom: 1.2vw;
     }
     .cart-main >.counter{
         margin: 0 !important;
         padding: 0 !important;
-        margin-left: 18px !important;
-        font-size: 18px;
+        margin-left: 3vw !important;
+        font-size: 3vw;
     }
     .pack{
         width: 17px !important;
@@ -133,7 +133,7 @@ body{
         top: -250px;
     }
     .pack i{
-        font-size: 25px;
+        font-size: 2.5vw;
     }
 
 }

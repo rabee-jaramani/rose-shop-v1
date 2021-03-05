@@ -13,15 +13,19 @@ export default function CARDS_CONTAINER(props) {
                   key={item.id}
                   item_name={item.item_name}
                   item_price={item.item_price}
+                  item_stock={item.item_stock}
                   item_qty={0}
                   image={item.image}
                   inc_counter={props.inc_counter}
+                  dec_counter={props.dec_counter}
+                  counter={props.counter}
                   // setcounter={props.setcounter}
                   // setproducts={props.setproducts}
                   products={props.products}
                   total={props.total}
                   add_existing_item_tocart={props.add_existing_item_tocart}
                   add_new_item_tocart={props.add_new_item_tocart}
+                  
                   />
                   
                 ))

@@ -8,7 +8,7 @@ export default function CARD(props) {
         let newitem={
             prod_name:props.item_name,
             prod_price:props.item_price,
-            prod_qty:card_counter+1
+            prod_qty:1
         };
         //check if the item is already in the cart
         if(props.products.find(x=> x.prod_name===props.item_name)){
@@ -44,21 +44,38 @@ export default function CARD(props) {
     }
 
     function remove_pack_from_cart(){
+        console.log('GENER Counter>> '+props.counter);
         if(props.counter===0){
             alert('cart is empty');
         }
         else
-        if(card_counter===0){
+        if(!props.products.find(x=> x.prod_name===props.item_name)){
             alert('this item not in the cart');
             }
         
         else{
-        setcard_counter(card_counter-1);
+       
+        if(props.products.find(x=> x.prod_name===props.item_name)){
+            var total=props.total;
+            let list=props.products;
+            var index=props.products.findIndex(x=> x.prod_name===props.item_name);
+            list[index].prod_qty=list[index].prod_qty-1;
+            setcard_counter(card_counter-1);
+            total=total-list[index].prod_price;
+            if(list[index].prod_qty===0){
+                list.splice(index,1);
+                setcard_counter(0);
+            }
+            props.add_existing_item_tocart(list,total);
+            props.dec_counter();
+            
+        }
         $('.btn-removefromcart').addClass('disable');
         $('.pack').addClass('pack-animation-remove');
         $('.cart-icon').addClass('cart-animation');
         $('.cart-main').addClass('cart-animation');
-        props.setcounter(props.counter-1);
+        
+        // props.setcounter(props.counter-1);
         setTimeout(dely_item_minus,2000);
         }
     }
@@ -75,7 +92,14 @@ export default function CARD(props) {
         <img src={props.image} alt=""/>
         <div className="card-details">
         <div className="card-title">{props.item_name}</div>
-        <div className="available">Available</div>
+        {
+            (props.item_stock===1) ? 
+            <div className="limited-stock">limited stock</div> 
+            :((props.item_stock===0)? <div className="not-available">available soon</div>
+            :<div className="available">Available</div>
+            )
+        }
+         {/* <div className="available">Available</div> */}
         <div className="price">{props.item_price} AED</div>
         <div className="plus-counter-minus">
             <div className="plus btn-addtocart" >

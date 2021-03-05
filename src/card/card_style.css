@@ -47,6 +47,17 @@ transform: scale(1.05,1.05);
 }
 .available{
     color: rgb(141, 243, 141);
+    text-align: center;
+}
+.limited-stock{
+    color: rgb(0, 255, 0);
+    text-align: center;
+    text-decoration: underline;
+}
+.not-available{
+    color: rgb(255, 169, 169);
+    text-align: center;
+    text-decoration: underline;
 }
 .plus-counter-minus{
     display: flex;
@@ -115,8 +126,8 @@ transform: scale(1.05,1.05);
         height: 250px;
 
       }
-      .card-title,.available,.price,.plus i,.minus i{
-          font-size: 14px;
+      .card-title,.available,.not-available,.limited-stock,.plus i,.minus i{
+          font-size: 2.5vw;
       }
       .plus-counter-minus{
         display: flex;
@@ -130,8 +141,8 @@ transform: scale(1.05,1.05);
         height: 230px;
 
       }
-      .card-title,.available,.price,.plus i,.minus i{
-        font-size: 13px;
+      .card-title,.available,.not-available,.limited-stock,.price,.plus i,.minus i{
+        font-size: 2.5vw;
     }
     .counter{
         font-size: 15px;
