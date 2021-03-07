@@ -59,4 +59,11 @@
         width: 80vw;
         
     }
+    .hdr-msg-div p{
+      font-size: 2.5vw;  
+    }
+    .hdr-msg-div a{
+        font-size: 2.5vw;  
+        text-decoration: none;
+      }
 }
