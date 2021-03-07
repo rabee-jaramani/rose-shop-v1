@@ -16,7 +16,7 @@ export default function ABOUT() {
                 If you are going to use a passage.<br/> Tel:13145353, Mobile:111546348</p>
              </div>
           <div className='dubai-img'>
-           <img className='dubai-img' src={dubai}></img>
+           <img className='dubai-img' alt='' src={dubai}></img>
           </div>
           <div className='abudhabi'>
             <h1>Abu dhabi</h1>
@@ -25,7 +25,7 @@ export default function ABOUT() {
               Tel:13145353, Mobile:111546348</p>
             </div>
           <div className='abudhabi-img'>
-            <img className='abudhabi-img' src={abudhabi}></img>
+            <img alt='' className='abudhabi-img' src={abudhabi}></img>
           </div>
           <div className='sharjah'>
           <h1>Sharjah</h1>
@@ -35,7 +35,7 @@ export default function ABOUT() {
                Tel:13145353, Mobile:111546348 </p>
           </div>
           <div className='sharjah-img'>
-            <img className='sharjah-img' src={sharjah}></img>
+            <img alt='' className='sharjah-img' src={sharjah}></img>
             </div>
         </div>
 
