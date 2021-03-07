@@ -1,0 +1,66 @@
+.about-container{
+    position: relative;
+    width: 90%;
+    height: 100vw;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-top: 10vw;
+   
+    animation: about_move_down 2s;
+}
+.about-container .title{
+    text-align: center;
+    padding:1vw;
+    color: rgb(41, 41, 41);
+    font-size: 3vw;
+ /* background: rgba(255, 255, 255, 0.459); */
+ 
+}
+.about-container .dubai,.sharjah,.abudhabi{
+    position: absolute;
+    width: 40vw;
+    height: 20vw;
+    background: linear-gradient(190deg,rgba(255, 255, 255, 0.719),rgba(255, 255, 255, 0.246));
+    border-radius: 10px;
+    color: rgb(41, 41, 41);
+    letter-spacing: .05vw;
+    text-align: center;
+    padding: 3vw 1vw;
+    margin: 2px 2vw;
+}
+.about-container p,h1{
+    font-size: 1.5vw;
+}
+.about-container img{
+    position: absolute;
+    border-radius: 10px;
+    width: 40vw;
+    height: 20vw;
+    margin: 2px 2vw;
+}
+.abudhabi{
+    top: 30vw;
+    right: 0;
+}
+.sharjah{
+    top: 55vw;
+}
+.abudhabi-img{
+    top: 30vw;
+}
+.dubai-img{
+    right: 0;
+}
+.sharjah-img{
+    top: 55vw;
+    right: 0;
+}
+
+@keyframes about_move_down{
+    0%{
+        top: -1500px;
+    }
+    100%{
+        top: 0;
+    }
+}

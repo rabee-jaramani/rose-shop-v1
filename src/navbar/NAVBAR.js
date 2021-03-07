@@ -2,6 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export default function NAVBAR(props) {
+    function show_home() {
+        document.querySelector('.hdr-msg-div').classList.remove('hide');
+        // document.querySelector('.hdr-msg-div').classList.add('move-down');
+    }
+    function show_about() {
+        document.querySelector('.hdr-msg-div').classList.add('hide');
+    }
+  
     function close_cart_menu() {
         document.querySelector('.cart-menu').classList.toggle('show-cart-menu');
     }
@@ -14,8 +22,8 @@ export default function NAVBAR(props) {
     return (
         <>
        <div className="navbar">
-        <div className="home"><Link className='Link' to='/'>Home</Link></div>
-        <div className="about">About</div>
+        <div className="home" onClick={show_home}><Link className='Link' to='/'>Home</Link></div>
+        <div className="about" onClick={show_about}><Link className='Link' to='/about'>About</Link></div>
         <div className="events">Events</div>
         {/* <Link className='search' to='/cards'>linkkkkkkk</Link> */}
         <div className="search">Search</div>

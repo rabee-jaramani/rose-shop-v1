@@ -1,11 +1,12 @@
 .header{
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .logo img{
     width: 10vw;
     margin-left: 1vw;
-    margin-top: 3vw;
     transition: 1s;
     animation: logo_rotate 2s;
     -webkit-box-shadow: 0 20px 30px -30px rgb(66, 66, 66);
@@ -18,71 +19,18 @@
         transform: scale(30,30);
         
     }
-    /* 25%{
-        transform: translate(35vw,15vw);
-        transform: scale(25,25);
-    }
-    50%{
-        transform: translate(30vw,10vw);
-        transform: scale(20,20);
-    }
-    75%{
-        transform: translate(20vw,5vw);
-        transform: scale(15,15);
-    } */
+   
     100%{
         transform: translate(1,1);
         transform: scale(0,0);
     }
 }
-.words{
-    display: flex;
-    justify-content: space-evenly;
-       
-}
-.header div{
-    color: rgb(250, 0, 133);
-    font-size: 2vw;
-    background-color: rgb(255, 255, 255,.5);
 
-    border-radius: 5px;
-}
 .logo{
     position: absolute;
     background-color: transparent !important;
 }
-.w1{
- 
-    animation: flash 1s infinite;
-}
-.w2{
 
-    animation: flash 2s infinite;
-}
-.w3{
-
-    animation: flash 3s infinite;
-}
-.w4{
-
-    animation: flash 4s infinite;
-}
-.w5{
-
-    animation: flash 5s infinite;
-}
-.w6{
-
-    animation: flash 3.5s infinite;
-}
-.w7{
-
-    animation: flash 1s infinite;
-}
-.w8{
-
-    animation: flash 1s infinite;
-}
 @media(max-width:600px){
     .header div{
       

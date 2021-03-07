@@ -1,5 +1,6 @@
 .hdr-msg-div{
     position: relative;
+    
     background: linear-gradient(190deg,rgba(255, 255, 255, 0.719),rgba(255, 255, 255, 0.246));
     /* width: 80vw; */
     margin-left: 50%;
@@ -8,6 +9,7 @@
     border-radius:10px;
     padding-bottom: 8vw;
     animation: hdr_msg_anim 2s;
+    transition: 1s;
 }
 .hdr-msg-div h1{
     font-size: 3.5vw;
@@ -15,6 +17,12 @@
     color: rgb(209, 4, 106);
     font-family: 'Raleway', sans-serif; 
     font-weight: bold;
+}
+.hdr-msg-div i{
+    font-size: 2.5vw;
+    text-align: center;
+    color: rgb(51, 50, 50);
+    margin: 1vw;
 }
 .hdr-msg-div p{
     color: rgb(49, 49, 49) ;
@@ -52,6 +60,30 @@
         top: 0vw;
     }
   
+}
+@keyframes move-up{
+    0%{
+        top:0vw
+    }
+    100%{
+        top: -900px;
+    }
+  
+}
+@keyframes move-down{
+    0%{
+        top:-900px;
+    }
+    100%{
+        top: 0vw
+    }
+  
+}
+.move-up-anim{
+    animation: move-up 1s;
+}
+.move-down-anim{
+    animation: move-down 1s;
 }
 @media(max-width:500px){
     .hdr-msg-div{
