@@ -1,8 +1,10 @@
 import React from 'react'
 import CARD from '../card/CARD'
+// import {$} from 'react-jquery-plugin'
 // import rose from '../card/rose.jpeg'
 import items from '../items'
 export default function CARDS_CONTAINER(props) {
+
     return (
         <>
             <div className='cards-container' id='cards'>

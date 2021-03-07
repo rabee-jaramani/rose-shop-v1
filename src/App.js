@@ -59,8 +59,8 @@ class App extends React.Component {
     <div className="App">
     <NAVBAR counter={this.state.counter}/>
       <HEADER/>
-     <HEADER_MESSAGE/>
-      
+     {/* <HEADER_MESSAGE/> */}
+      <Route path='/' render={props=><HEADER_MESSAGE/>}/>
       <Route path='/cards' render={props =><CARDS_CONTAINER 
           products={this.state.products}
           add_existing_item_tocart={this.add_existing_item_tocart.bind(this)}

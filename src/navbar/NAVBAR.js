@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function NAVBAR(props) {
     function close_cart_menu() {
@@ -13,7 +14,7 @@ export default function NAVBAR(props) {
     return (
         <>
        <div className="navbar">
-        <div className="home">Home</div>
+        <div className="home"><Link className='Link' to='/'>Home</Link></div>
         <div className="about">About</div>
         <div className="events">Events</div>
         {/* <Link className='search' to='/cards'>linkkkkkkk</Link> */}
