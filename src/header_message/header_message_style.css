@@ -1,0 +1,55 @@
+.hdr-msg-div{
+    position: relative;
+    background: linear-gradient(190deg,rgba(255, 255, 255, 0.719),rgba(255, 255, 255, 0.246));
+    /* width: 80vw; */
+    margin-left: 50%;
+    margin-top: 10vw;
+    transform: translate(-50%);
+    border-radius:10px;
+    padding-bottom: 8vw;
+    animation: hdr_msg_anim 2s;
+}
+.hdr-msg-div h1{
+    font-size: 3.5vw;
+    text-align: center;
+    color: rgb(209, 4, 106);
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+}
+.hdr-msg-div p{
+    color: rgb(49, 49, 49) ;
+    font-size: 1.5vw;
+
+}
+.hdr-msg-btn{
+    position: absolute;
+    padding: 1vw;
+    background: linear-gradient(to right, rgba(255, 0, 128, 0.486),rgb(255, 0, 76));
+    border-radius: 5px;
+    width: 30vw;
+    bottom: 0;
+    font-size: 2vw;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.719);
+    margin-left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    margin-bottom: 2vw;
+    transition: .5s;
+    
+}
+.hdr-msg-btn:hover{
+    background: linear-gradient(to right, rgb(255, 0, 128),rgb(255, 0, 76,.4));
+    width: 35vw;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+@keyframes hdr_msg_anim{
+    0%{
+        top:-50vw
+    }
+    100%{
+        top: 0vw;
+    }
+  
+}

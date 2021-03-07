@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function NAVBAR(props) {
     function close_cart_menu() {
@@ -16,6 +17,7 @@ export default function NAVBAR(props) {
         <div className="home">Home</div>
         <div className="about">About</div>
         <div className="events">Events</div>
+        {/* <Link className='search' to='/cards'>linkkkkkkk</Link> */}
         <div className="search">Search</div>
         <div className="login">Log In</div>
         <div className="cart" onClick={close_cart_menu}>

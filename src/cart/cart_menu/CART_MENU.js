@@ -10,7 +10,7 @@ export default function CART_MENU(props) {
     return (
         <>
              <div className='cart-menu' >
-                 <div className='close-icon' onClick={close_cart_menu}><i class="fas fa-times"></i></div>
+                 <div className='close-icon' onClick={close_cart_menu}><i className="fas fa-times"></i></div>
                 <div className='cart-title'>Cart</div>
                 <div className='total-title'>Total:</div>
                 <div className='total-aed'>{props.total} AED</div>

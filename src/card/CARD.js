@@ -3,7 +3,16 @@ import { $ }  from 'react-jquery-plugin'
 export default function CARD(props) {
   
      const [card_counter, setcard_counter] = useState(0);
-    
+
+     function show_info(e) {
+        
+        // document.getElementById(`${props.id}`).classList.add('show-item');
+        // document.getElementById('0').classList.add('show-item');
+        var list=document.querySelectorAll('.item-info');
+        console.log('ssssss '+list[props.id].classList);
+       list[props.id].classList.add('show-info');
+       console.log('ssssss '+list[props.id].classList);
+      }
     function add_pack_to_cart(){
         let newitem={
             prod_name:props.item_name,
@@ -88,8 +97,16 @@ export default function CARD(props) {
 
     return (
         <>
-        <div className="card">
+        <div className='card' id={props.id}>
+    
+                  <div className='item-info'>
+                <div >{props.item_name}</div>
+                <div >{props.item_price}</div>
+                  <div >{props.item_stock}</div>
+               </div>
+     
         <img src={props.image} alt=""/>
+   
         <div className="card-details">
         <div className="card-title">{props.item_name}</div>
         {
@@ -113,7 +130,8 @@ export default function CARD(props) {
         
         {/* <div className="more-info"><i className="fas fa-info i-card"></i></div> */}
     </div>
-    <div className='card-more-info'><i className="far fa-question-circle"></i></div>
+    <div className='card-more-info' ><i className="far fa-question-circle" onClick={show_info}></i></div>
+ 
     </div>
     </>
     )

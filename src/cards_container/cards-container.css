@@ -1,6 +1,6 @@
 .cards-container{
+    margin-top: 10vw;
    margin-left: 5% !important;
-   margin-top: 1000px;
     width: 90%;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(358px, 1fr) );
@@ -23,3 +23,4 @@
         grid-auto-rows: minmax(220px, 270px);
     }
 }
+

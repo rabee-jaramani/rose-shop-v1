@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../logo/logo.png'
 export default function HEADER() {
     return (
@@ -7,7 +8,7 @@ export default function HEADER() {
             <div className='header'>
                 <div className='logo'><img src={logo} alt='LOGO'></img></div>
                 <div className='words'>
-                    
+                
             <div className='w1 '>Always</div>
             <div className='w2'>Deliver</div>
             <div className='w3 '>More</div>

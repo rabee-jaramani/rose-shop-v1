@@ -3,14 +3,14 @@ import CARD from '../card/CARD'
 // import rose from '../card/rose.jpeg'
 import items from '../items'
 export default function CARDS_CONTAINER(props) {
-    
     return (
         <>
-            <div className='cards-container'>
+            <div className='cards-container' id='cards'>
+   
               {
                 items.map((item)=>(
                   <CARD 
-                  key={item.id}
+                  id={item.id}
                   item_name={item.item_name}
                   item_price={item.item_price}
                   item_stock={item.item_stock}
@@ -25,7 +25,7 @@ export default function CARDS_CONTAINER(props) {
                   total={props.total}
                   add_existing_item_tocart={props.add_existing_item_tocart}
                   add_new_item_tocart={props.add_new_item_tocart}
-                  
+                 
                   />
                   
                 ))

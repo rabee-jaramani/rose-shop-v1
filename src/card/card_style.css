@@ -155,3 +155,19 @@ transform: scale(1.05,1.05);
       margin-bottom: 0;
   }
 }
+.item-info{
+    position: absolute;
+
+    width: 100%;
+    margin-left: 0;
+    
+    opacity: 0;
+    background-color: rebeccapurple;
+    z-index: 100;
+    border: solid 3px white;
+    transition: .5s;
+
+}
+.show-info{
+    opacity: 1;
+}

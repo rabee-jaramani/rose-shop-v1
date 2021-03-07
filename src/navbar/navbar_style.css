@@ -1,11 +1,7 @@
 .hide{
     display: none !important;
 }
-body{
-    background-image: url('../header.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .navbar{
     width: 4vw;
     height: 16vw;

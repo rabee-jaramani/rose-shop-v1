@@ -1,5 +1,7 @@
 import React from 'react'
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 
+import './App_style.css'
 import './card/card_style.css'
 import './navbar/navbar_style.css'
 import './cart/cart_style.css'
@@ -7,13 +9,16 @@ import './cards_container/cards-container.css'
 import './cart/cart_menu/cart_menu.css'
 import './cart/cart_items/cart_item.css'
 import './header/header_style.css'
+import './header_message/header_message_style.css'
 
 import NAVBAR from './navbar/NAVBAR';
 import CART from './cart/CART'
-import CARDS_CONTAINER from './cards_container/CARDS_CONTAINER';
+import CARDS_CONTAINER from './cards_container/CARDS_CONTAINER.js';
 import CART_MENU from './cart/cart_menu/CART_MENU'
 import HEADER from './header/HEADER'
-// import { render } from '@testing-library/react'
+import HEADER_MESSAGE from './header_message/HEADER_MESSAGE';
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -48,18 +53,23 @@ class App extends React.Component {
     }))
   }
   render() {
-    return <div className="App">
-     
-      <NAVBAR counter={this.state.counter}/>
+    return (
+      <BrowserRouter>
+
+    <div className="App">
+    <NAVBAR counter={this.state.counter}/>
       <HEADER/>
-      <CARDS_CONTAINER 
-      products={this.state.products}
-      add_existing_item_tocart={this.add_existing_item_tocart.bind(this)}
-      add_new_item_tocart={this.add_new_item_tocart.bind(this)}
-      total={this.state.total}
-      inc_counter={this.inc_counter.bind(this)}
-      dec_counter={this.dec_counter.bind(this)}
-      counter={this.state.counter}
+     <HEADER_MESSAGE/>
+      
+      <Route path='/cards' render={props =><CARDS_CONTAINER 
+          products={this.state.products}
+          add_existing_item_tocart={this.add_existing_item_tocart.bind(this)}
+          add_new_item_tocart={this.add_new_item_tocart.bind(this)}
+          total={this.state.total}
+          inc_counter={this.inc_counter.bind(this)}
+          dec_counter={this.dec_counter.bind(this)}
+          counter={this.state.counter}
+      />}
       />
       <CART counter={this.state.counter}/>
       <CART_MENU
@@ -70,6 +80,8 @@ class App extends React.Component {
         dec_counter={this.dec_counter.bind(this)}
       />
     </div>
+    </BrowserRouter>
+    )
       }
 }
 
