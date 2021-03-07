@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import './App_style.css'
 import './card/card_style.css'
