@@ -3,7 +3,7 @@
     background: linear-gradient(190deg,rgba(255, 255, 255, 0.719),rgba(255, 255, 255, 0.246));
     /* width: 80vw; */
     margin-left: 50%;
-    margin-top: 10vw;
+    margin-top: 25vw;
     transform: translate(-50%);
     border-radius:10px;
     padding-bottom: 8vw;
@@ -57,6 +57,7 @@
     .hdr-msg-div{
       
         width: 80vw;
+        margin-top: 0;
         margin-top: 70vw;
     }
     .hdr-msg-div p{
