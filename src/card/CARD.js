@@ -9,9 +9,11 @@ export default function CARD(props) {
         // document.getElementById(`${props.id}`).classList.add('show-item');
         // document.getElementById('0').classList.add('show-item');
         var list=document.querySelectorAll('.item-info');
-        console.log('ssssss '+list[props.id].classList);
        list[props.id].classList.add('show-info');
-       console.log('ssssss '+list[props.id].classList);
+      }
+      function hide_info() {
+        var list=document.querySelectorAll('.item-info');
+        list[props.id].classList.remove('show-info');
       }
     function add_pack_to_cart(){
         let newitem={
@@ -100,9 +102,10 @@ export default function CARD(props) {
         <div className='card' id={props.id}>
     
                   <div className='item-info'>
-                <div >{props.item_name}</div>
-                <div >{props.item_price}</div>
-                  <div >{props.item_stock}</div>
+                <div >Name: {props.item_name}</div>
+                <div >Price in AED: {props.item_price}</div>
+                  <div >Quantity in stock: {props.item_stock}</div>
+                  <div>Info: {props.info}</div>
                </div>
      
         <img src={props.image} alt=""/>
@@ -130,7 +133,7 @@ export default function CARD(props) {
         
         {/* <div className="more-info"><i className="fas fa-info i-card"></i></div> */}
     </div>
-    <div className='card-more-info' ><i className="far fa-question-circle" onClick={show_info}></i></div>
+    <div className='card-more-info' ><i className="far fa-question-circle" onMouseOut={hide_info} onMouseOver={show_info}></i></div>
  
     </div>
     </>
