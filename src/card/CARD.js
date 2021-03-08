@@ -121,7 +121,20 @@ export default function CARD(props) {
         }
          {/* <div className="available">Available</div> */}
         <div className="price">{props.item_price} AED</div>
-        <div className="plus-counter-minus">
+        {props.item_stock===0?
+        <div className="plus-counter-minus hide">
+            
+        <div className="plus btn-addtocart" >
+            <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
+        </div>
+        <div className="counter"></div>
+        <div className="minus btn-removefromcart" >
+            <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
+        </div>
+    </div> 
+    :
+    <div className="plus-counter-minus">
+            
             <div className="plus btn-addtocart" >
                 <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
             </div>
@@ -129,7 +142,18 @@ export default function CARD(props) {
             <div className="minus btn-removefromcart" >
                 <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
             </div>
-        </div>      
+        </div> 
+    }
+        {/* <div className="plus-counter-minus">
+            
+            <div className="plus btn-addtocart" >
+                <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
+            </div>
+            <div className="counter"></div>
+            <div className="minus btn-removefromcart" >
+                <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
+            </div>
+        </div>       */}
         
         {/* <div className="more-info"><i className="fas fa-info i-card"></i></div> */}
     </div>

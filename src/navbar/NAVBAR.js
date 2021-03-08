@@ -24,7 +24,7 @@ export default function NAVBAR(props) {
        <div className="navbar">
         <div className="home" onClick={show_home}><Link className='Link' to='/'>Home</Link></div>
         <div className="about" onClick={show_about}><Link className='Link' to='/about'>About</Link></div>
-        <div className="events">Events</div>
+        <div className="events"  onClick={show_about}><Link className='Link' to='/events'>Events</Link></div>
         {/* <Link className='search' to='/cards'>linkkkkkkk</Link> */}
         <div className="search">Search</div>
         <div className="login">Log In</div>

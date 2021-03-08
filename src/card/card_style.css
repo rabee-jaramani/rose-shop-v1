@@ -10,6 +10,10 @@
 body{
     background-color: rgba(39, 27, 34, 0.3);
 }
+.disable{
+    pointer-events: none;
+    opacity: 0.4;
+}
 .card{
   width: 350px;
   height: 400px;

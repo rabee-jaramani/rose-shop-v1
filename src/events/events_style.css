@@ -1,0 +1,32 @@
+.videos-container{
+    width: 95%;
+    
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-top: 1vw;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(450px, 1fr) );
+    grid-auto-rows: minmax(400px, 420px);
+    gap: 1vw;
+    animation: hdr_msg_anim 2s;
+    transition: 1s;
+}
+.video{
+    position: relative;
+}
+.react-player{
+position: absolute;
+width: 300px;
+height: 100px;
+}
+.events-title{
+    text-align: center;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 4vw;
+    color: white;
+    background: linear-gradient(to right, rgba(255, 0, 128, 0.486),rgb(255, 0, 76));
+    margin-top: 15vw;
+    animation: hdr_msg_anim 2s;
+    transition: 1s;
+}

@@ -11,6 +11,7 @@ import './cart/cart_items/cart_item.css'
 import './header/header_style.css'
 import './header_message/header_message_style.css'
 import './about/about_style.css'
+import './events/events_style.css'
 
 import NAVBAR from './navbar/NAVBAR';
 import CART from './cart/CART'
@@ -19,6 +20,7 @@ import CART_MENU from './cart/cart_menu/CART_MENU'
 import HEADER from './header/HEADER'
 import HEADER_MESSAGE from './header_message/HEADER_MESSAGE';
 import ABOUT from './about/ABOUT';
+import EVENTS from './events/EVENTS';
 
 
 class App extends React.Component {
@@ -64,6 +66,7 @@ class App extends React.Component {
      {/* <HEADER_MESSAGE/> */}
       <Route path='/' render={props=><HEADER_MESSAGE/>}/>
       <Route path='/about' render={props=><ABOUT/>}/>
+      <Route path='/events' render={props=><EVENTS/>}/>
       <Route path='/cards' render={props =><CARDS_CONTAINER 
           products={this.state.products}
           add_existing_item_tocart={this.add_existing_item_tocart.bind(this)}
