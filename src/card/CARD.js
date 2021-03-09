@@ -29,7 +29,8 @@ export default function CARD(props) {
             list[index].prod_qty=list[index].prod_qty+1;
             total=total+list[index].prod_price;
             props.add_existing_item_tocart(list,total);
-            setcard_counter(card_counter+1);
+            setcard_counter(list[index].prod_qty);
+            
         }
         else{
         props.add_new_item_tocart(newitem);
@@ -114,13 +115,12 @@ export default function CARD(props) {
         <div className="card-title">{props.item_name}</div>
         {
             (props.item_stock===1) ? 
-            <div className="limited-stock">limited stock</div> 
-            :((props.item_stock===0)? <div className="not-available">available soon</div>
+            <div className="limited-stock">Limited Stock</div> 
+            :((props.item_stock===0)? <div className="not-available">Available </div>
             :<div className="available">Available</div>
             )
         }
-         {/* <div className="available">Available</div> */}
-        <div className="price">{props.item_price} AED</div>
+            <div className="price">{props.item_price} AED</div>
         {props.item_stock===0?
         <div className="plus-counter-minus hide">
             
@@ -138,7 +138,8 @@ export default function CARD(props) {
             <div className="plus btn-addtocart" >
                 <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
             </div>
-            <div className="counter"></div>
+
+            <div className="counter">  {card_counter}    </div>
             <div className="minus btn-removefromcart" >
                 <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
             </div>

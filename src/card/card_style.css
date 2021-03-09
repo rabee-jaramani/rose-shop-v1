@@ -44,33 +44,39 @@ transform: scale(1.05,1.05);
     border-radius: 0 0 5px 5px !important;
     margin-top: -.5vw;
     border-radius: 0 0 1vw 1vw;
+    z-index: 0;
 }
 .card-title,.price{
     color: white;
     margin-left: .5vw;
 }
-.available{
-    color: rgb(141, 243, 141);
-  
+.card-title{
+ font-size: 19px !important;
 }
-.limited-stock{
-    color: rgb(0, 255, 0);
-    text-decoration: underline;
+.price{
+font-size: 16px;
 }
+.available,.limited-stock{
+    color: rgb(255, 169, 169);
+    margin-left: 53px;
+}
+
 .not-available{
     color: rgb(255, 169, 169);
-    text-decoration: underline;
+    text-decoration: line-through;
 }
 .plus-counter-minus{
     display: flex;
-    width: 6vw;
-    justify-content: space-between;
+    width: 5vw;
+    justify-content: space-evenly;
     margin-bottom: 2vw;
 }
 .plus i,.minus i,.counter{
     color: white;
 }
 .plus i,.minus i{
+    margin-right: 8px;
+    font-size: 18px;
     cursor: pointer;
     transition: .3s;
 }
@@ -79,8 +85,8 @@ transform: scale(1.05,1.05);
 }
 .card-more-info{
     position: absolute;
-    right: .5vw;
-    bottom: 1vw;
+    right: .1vw;
+    bottom: .1vw;
     cursor: pointer;
 }
 .card-more-info i{
@@ -104,6 +110,19 @@ transform: scale(1.05,1.05);
   
 }
 @media(max-width:670px){
+    .plus-counter-minus{
+        width: 10vw;
+    }
+
+    .plus i,.minus i{
+        font-size: 18   px;
+    }
+    .card-title{
+        font-size: 13px !important;
+       }
+       .price{
+       font-size: 11px;
+       }
     .card{
         width: 250px;
         height: 300px;
@@ -118,7 +137,7 @@ transform: scale(1.05,1.05);
     }
     .card-more-info{
         position: absolute;
-        right: 5px;
+        right: 0;
         bottom: 0;
         cursor: pointer;
     }
@@ -158,25 +177,35 @@ transform: scale(1.05,1.05);
       width: 12vw;
       margin-bottom: 0;
   }
+
 }
 .item-info{
     position: absolute;
-
     width: 100%;
+    height: 85%;
     margin-left: 0;
     border-radius: 5px;
     opacity: 0;
     background-color: rgb(211, 190, 151);
-    z-index: 100;
-    border: solid 3px white;
     transition: .5s;
-
 }
 .item-info div{
-    letter-spacing: 0.1vw;
+    font-size: 17px;
     margin: 0.4vw;
 
 }
 .show-info{
     opacity: 1;
+}
+@media(max-width:700px){
+    .item-info div{
+        font-size: 11px;
+    
+    }
+}
+@media(max-width:400px){
+    .item-info div{
+        font-size: 8px;
+    
+    }
 }

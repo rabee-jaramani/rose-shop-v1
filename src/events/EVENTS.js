@@ -2,7 +2,7 @@ import React from 'react'
 import ReactPlayer from "react-player"
 export default function EVENTS() {
     return (
-        <>
+        <div className='events1'>
         <div className='events-title'>Our Events In Last Year</div>
             <div className='videos-container'>
 
@@ -55,6 +55,6 @@ export default function EVENTS() {
                     />
                 </div>
             </div>
-        </>
+        </div>
     )
 }

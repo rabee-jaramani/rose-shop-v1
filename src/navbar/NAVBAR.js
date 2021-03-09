@@ -7,7 +7,20 @@ export default function NAVBAR(props) {
         // document.querySelector('.hdr-msg-div').classList.add('move-down');
     }
     function show_about() {
+
         document.querySelector('.hdr-msg-div').classList.add('hide');
+        setTimeout(()=>{document.querySelector('.about-container').classList.add('hide')},0);
+        document.querySelector('.loading').classList.remove('hide')
+        setTimeout(()=>{document.querySelector('.about-container').classList.remove('hide')},2000)
+        setTimeout(()=>{document.querySelector('.loading').classList.add('hide')},2000)
+    }
+    function show_events() {
+
+        document.querySelector('.hdr-msg-div').classList.add('hide');
+        setTimeout(()=>{document.querySelector('.events1').classList.add('hide')},0);
+        document.querySelector('.loading').classList.remove('hide')
+        setTimeout(()=>{document.querySelector('.events1').classList.remove('hide')},2000)
+        setTimeout(()=>{document.querySelector('.loading').classList.add('hide')},2000)
     }
   
     function close_cart_menu() {
@@ -24,7 +37,7 @@ export default function NAVBAR(props) {
        <div className="navbar">
         <div className="home" onClick={show_home}><Link className='Link' to='/'>Home</Link></div>
         <div className="about" onClick={show_about}><Link className='Link' to='/about'>About</Link></div>
-        <div className="events"  onClick={show_about}><Link className='Link' to='/events'>Events</Link></div>
+        <div className="events" onClick={show_events}><Link className='Link' to='/events'>Events</Link></div>
         {/* <Link className='search' to='/cards'>linkkkkkkk</Link> */}
         <div className="search">Search</div>
         <div className="login">Log In</div>
@@ -39,9 +52,9 @@ export default function NAVBAR(props) {
             <i className="fas fa-bars"></i>
             <i className="fas fa-times hide"></i>
         </div>
-        <div className="home-m">Home</div>
-        <div className="about-m">About</div>
-        <div className="events-m">Events</div>
+        <div className="home-m" onClick={show_home}><Link className='Link' to='/'>Home</Link></div>
+        <div className="about-m" onClick={show_about}><Link className='Link' to='/about'>About</Link></div>
+        <div className="events-m" onClick={show_events}><Link className='Link' to='/events'>Events</Link></div>
         <div className="search-m">Search</div>
         <div className="login-m">Log In</div>
         <div className="cart-m">

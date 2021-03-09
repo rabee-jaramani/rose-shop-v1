@@ -20,7 +20,7 @@
     height: 1.8vw;
     margin: .5vw auto;
     cursor: pointer;
-    transition: ease .5s;
+    /* transition: ease .5s; */
     text-align: center;
     justify-content: center;
     border-radius: 0 0 50px 0;
@@ -44,16 +44,15 @@
     margin-left: 2.5vw;
 }
 .home:hover,.about:hover,.search:hover,.events:hover,.login:hover{
-background-color: rgb(204, 204, 204);
-color: var(--main_color);
-transform: translate(-10px,0);
-border-bottom: 2px solid var(--gold_color);
+/* background-color: rgb(204, 204, 204);
+color: var(--main_color); */
+/* transform: translate(-10px,0); */
+color: white;
+border-bottom: 2px solid white;
 }
 .Link:hover{
-    /* background-color: rgb(204, 204, 204); */
-    color: var(--main_color);
-    transform: translate(-10px,0);
-    border-bottom: 2px solid var(--gold_color);
+    text-decoration: none;
+    color: white;
     }
 .navbar-mobile{
     display: none;

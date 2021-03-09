@@ -12,6 +12,7 @@ import './header/header_style.css'
 import './header_message/header_message_style.css'
 import './about/about_style.css'
 import './events/events_style.css'
+import './loading/loading_style.css'
 
 import NAVBAR from './navbar/NAVBAR';
 import CART from './cart/CART'
@@ -21,6 +22,7 @@ import HEADER from './header/HEADER'
 import HEADER_MESSAGE from './header_message/HEADER_MESSAGE';
 import ABOUT from './about/ABOUT';
 import EVENTS from './events/EVENTS';
+import LOADING from './loading/LOADING';
 
 
 class App extends React.Component {
@@ -32,6 +34,7 @@ class App extends React.Component {
       total:0
     }
   }
+
   inc_counter(){
     this.setState({
       counter:this.state.counter+1
@@ -54,7 +57,15 @@ class App extends React.Component {
     this.setState(prevState=>({
       total:total,
       products:list,
-    }))
+    }));
+   
+  }
+  componentDidMount(){
+    console.log("DID MOUNT");
+    // document.querySelector('.loading').classList.add('hide');
+  }
+  componentDidUpdate(){
+    console.log("DID UPDATE")
   }
   render() {
     return (
@@ -62,11 +73,14 @@ class App extends React.Component {
 
     <div className="App">
     <NAVBAR counter={this.state.counter}/>
+
+    <LOADING/>
       <HEADER/>
      {/* <HEADER_MESSAGE/> */}
       <Route path='/' render={props=><HEADER_MESSAGE/>}/>
       <Route path='/about' render={props=><ABOUT/>}/>
       <Route path='/events' render={props=><EVENTS/>}/>
+      
       <Route path='/cards' render={props =><CARDS_CONTAINER 
           products={this.state.products}
           add_existing_item_tocart={this.add_existing_item_tocart.bind(this)}
@@ -74,6 +88,7 @@ class App extends React.Component {
           total={this.state.total}
           inc_counter={this.inc_counter.bind(this)}
           dec_counter={this.dec_counter.bind(this)}
+         
           counter={this.state.counter}
       />}
       />
@@ -85,7 +100,9 @@ class App extends React.Component {
         inc_counter={this.inc_counter.bind(this)}
         dec_counter={this.dec_counter.bind(this)}
       />
+        
     </div>
+   
     </BrowserRouter>
     )
       }

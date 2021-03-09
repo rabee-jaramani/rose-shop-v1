@@ -28,7 +28,7 @@ export default function CART_MENU(props) {
                             dec_counter={props.dec_counter}
                             />
                         ))}
-                        
+                         
                     </div>
                 <div className='buttons-div'>
                     <div className='proceed-btn'>Proceed</div>
