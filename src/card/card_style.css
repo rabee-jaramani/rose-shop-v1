@@ -14,6 +14,10 @@ body{
     pointer-events: none;
     opacity: 0.4;
 }
+.remove{
+    opacity: 0 !important;
+    pointer-events: none;
+}
 .card{
   width: 350px;
   height: 400px;
@@ -58,27 +62,32 @@ font-size: 16px;
 }
 .available,.limited-stock{
     color: rgb(255, 169, 169);
-    margin-left: 53px;
+    margin-left: 53px !important;
 }
 
 .not-available{
     color: rgb(255, 169, 169);
     text-decoration: line-through;
+    margin-left: 53px !important;
 }
 .plus-counter-minus{
     display: flex;
     width: 5vw;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 2vw;
 }
-.plus i,.minus i,.counter{
-    color: white;
-}
 .plus i,.minus i{
-    margin-right: 8px;
+    position: absolute;
+    color: white;
     font-size: 18px;
     cursor: pointer;
     transition: .3s;
+}
+.minus i{
+    right: 50px;
+}
+.plus i{
+    right: 100px;
 }
 .plus i:hover,.minus i:hover{
     transform: scale(1.5,1.5)
@@ -91,11 +100,27 @@ font-size: 16px;
 }
 .card-more-info i{
     color: var(--gold_color);
-    font-size: 2vw;
+    font-size: 22px;
     transition: .3s;
 }
 .card-more-info i:hover{
  color: white;
+}
+@media(max-width:900px){
+    .minus i{
+        right: 35px;
+    }
+    .plus i{
+        right: 70px;
+    }
+}
+@media(max-width:600px){
+    .minus i{
+        right: 25px;
+    }
+    .plus i{
+        right: 60px;
+    }
 }
 @media(max-width:890px){
     .card{
@@ -106,6 +131,9 @@ font-size: 16px;
       .card-details{
         height: 53px;
        
+    }
+    .available,.limited-stock,.not-available{
+        font-size: 1.8vw;
     }
   
 }
@@ -151,9 +179,11 @@ font-size: 16px;
         height: 250px;
 
       }
-      .card-title,.available,.not-available,.limited-stock,.plus i,.minus i{
-          font-size: 2.58vw;
+  .available,.not-available,.limited-stock,.plus i,.minus i{
+          font-size: 1.58vw;
       }
+
+      
       .plus-counter-minus{
         display: flex;
         width: 50px;
@@ -166,11 +196,11 @@ font-size: 16px;
         height: 53vw;
 
       }
-      .card-title,.available,.not-available,.limited-stock,.price,.plus i,.minus i{
-        font-size: 3vw;
+    .available,.not-available,.limited-stock,.price{
+        font-size: 9px;
     }
-    .counter{
-        font-size: 15px;
+    .card-title{
+        font-size: 9px !important;
     }
     .plus-counter-minus{
       display: flex;

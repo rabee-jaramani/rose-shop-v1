@@ -1,19 +1,27 @@
 .lds-heart {
     display: inline-block;
     position: absolute;
-    margin-left: 48%;
+    margin-left: 46%;
     top: 20%;
     width: 80px;
     height: 80px;
     transform: rotate(45deg);
     transform-origin: 40px 40px;
   }
+  /* @media(max-width:600)
+  {
+    .lds-heart {
+      position: absolute !important;
+      top: 0%;
+      margin-left: 3%;
+    }
+  } */
   .lds-heart div {
     top: 32px;
     left: 32px;
     position: absolute;
-    width: 4vw;
-    height: 4vw;
+    width: 80px;
+    height: 80px;
     background: linear-gradient(to right, rgba(255, 0, 128, 0.486),rgb(255, 0, 76));
     animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -22,8 +30,8 @@
     content: " ";
     position: absolute;
     display: block;
-    width: 4vw;
-    height: 4vw;
+    width: 80px;
+    height: 80px;
     background: linear-gradient(to right, rgba(255, 0, 128, 0.486),rgb(255, 0, 76));
   }
   .lds-heart div:before {

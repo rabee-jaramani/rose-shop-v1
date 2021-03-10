@@ -51,7 +51,7 @@ class App extends React.Component {
       products:[...prevState.products,item],
       total:prevState.total+item.prod_price,
     }));
-    console.log('adding same item >> Total is >> '+this.state.total);
+    
   }
   add_existing_item_tocart(list,total) {
     this.setState(prevState=>({
@@ -61,11 +61,10 @@ class App extends React.Component {
    
   }
   componentDidMount(){
-    console.log("DID MOUNT");
     // document.querySelector('.loading').classList.add('hide');
   }
   componentDidUpdate(){
-    console.log("DID UPDATE")
+    // console.log('PRODUCTS >> '+this.state.products[0].prod_qty);
   }
   render() {
     return (

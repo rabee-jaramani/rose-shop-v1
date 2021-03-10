@@ -112,6 +112,10 @@ border-bottom: 2px solid white;
         left: 0;
         cursor: pointer;
     }
+    .Link{
+        color: white;
+        font-size: 18px;
+    }
     .home-m{
         bottom: 350px !important;
         left: 50px !important;

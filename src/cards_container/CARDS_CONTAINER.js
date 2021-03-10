@@ -1,17 +1,25 @@
+// import { render } from '@testing-library/react';
 import React from 'react'
 import CARD from '../card/CARD'
 // import {$} from 'react-jquery-plugin'
 // import rose from '../card/rose.jpeg'
 import items from '../items'
-export default function CARDS_CONTAINER(props) {
-
+export default class CARDS_CONTAINER extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  componentDidUpdate(){
+ 
+ 
+  }
+    render(){
     return (
         <>
             <div className='cards-container' id='cards'>
-   
               {
                 items.map((item)=>(
                   <CARD 
+                  key={item.id}
                   id={item.id}
                   item_name={item.item_name}
                   item_price={item.item_price}
@@ -19,87 +27,16 @@ export default function CARDS_CONTAINER(props) {
                   item_qty={0}
                   image={item.image}
                   info={item.info}
-                  inc_counter={props.inc_counter}
-                  dec_counter={props.dec_counter}
-                  counter={props.counter}
-                  // setcounter={props.setcounter}
-                  // setproducts={props.setproducts}
-                  products={props.products}
-                  total={props.total}
-                  add_existing_item_tocart={props.add_existing_item_tocart}
-                  add_new_item_tocart={props.add_new_item_tocart}
-                 
-                  />
-                  
-                ))
+                  inc_counter={this.props.inc_counter}
+                  dec_counter={this.props.dec_counter}
+                  counter={this.props.counter}
+                  products={this.props.products}
+                  total={this.props.total}
+                  add_existing_item_tocart={this.props.add_existing_item_tocart}
+                  add_new_item_tocart={this.props.add_new_item_tocart}
+                  />))
               }
-           
-             {/* <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-             <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                  <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                  <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                  <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                  <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                  <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                  <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                  <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                        <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                        <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                        <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                />
-                        <CARD 
-                image={rose}
-                counter={props.counter}
-                setcounter={props.setcounter}
-                /> */}
-            </div>
+             </div>
         </>
-    )
+    )}
 }

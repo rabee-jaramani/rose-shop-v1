@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export default function NAVBAR(props) {
+
     function show_home() {
         document.querySelector('.hdr-msg-div').classList.remove('hide');
         // document.querySelector('.hdr-msg-div').classList.add('move-down');
@@ -47,8 +48,8 @@ export default function NAVBAR(props) {
             
         </div>
     </div>
-    <div className="navbar-mobile">
-        <div className="menu-bars" onClick={menu_bars_clicked}>
+    <div className="navbar-mobile" onClick={menu_bars_clicked}>
+        <div className="menu-bars" >
             <i className="fas fa-bars"></i>
             <i className="fas fa-times hide"></i>
         </div>

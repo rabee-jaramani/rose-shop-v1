@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import { $ }  from 'react-jquery-plugin'
 export default function CARD(props) {
   
-     const [card_counter, setcard_counter] = useState(0);
 
      function show_info(e) {
         
@@ -29,12 +28,15 @@ export default function CARD(props) {
             list[index].prod_qty=list[index].prod_qty+1;
             total=total+list[index].prod_price;
             props.add_existing_item_tocart(list,total);
-            setcard_counter(list[index].prod_qty);
             
         }
         else{
         props.add_new_item_tocart(newitem);
-        setcard_counter(card_counter+1);
+        
+        var minus_list=document.querySelectorAll('.minus-icon');
+        console.log("ID>> "+props.id);
+        console.log("MINUS>> "+minus_list.length)
+            minus_list[props.id].classList.remove('hide');
     }
         $('.btn-addtocart').addClass('disable');
         $('.pack').addClass('pack-animation');
@@ -72,11 +74,9 @@ export default function CARD(props) {
             let list=props.products;
             var index=props.products.findIndex(x=> x.prod_name===props.item_name);
             list[index].prod_qty=list[index].prod_qty-1;
-            setcard_counter(card_counter-1);
             total=total-list[index].prod_price;
             if(list[index].prod_qty===0){
                 list.splice(index,1);
-                setcard_counter(0);
             }
             props.add_existing_item_tocart(list,total);
             props.dec_counter();
@@ -127,9 +127,8 @@ export default function CARD(props) {
         <div className="plus btn-addtocart" >
             <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
         </div>
-        <div className="counter"></div>
         <div className="minus btn-removefromcart" >
-            <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
+            <i className="fas minus-icon fa-minus i-card hide" onClick={remove_pack_from_cart}></i>
         </div>
     </div> 
     :
@@ -138,27 +137,15 @@ export default function CARD(props) {
             <div className="plus btn-addtocart" >
                 <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
             </div>
-
-            <div className="counter">  {card_counter}    </div>
             <div className="minus btn-removefromcart" >
-                <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
+                <i className="fas minus-icon fa-minus i-card hide" onClick={remove_pack_from_cart}></i>
             </div>
         </div> 
     }
-        {/* <div className="plus-counter-minus">
-            
-            <div className="plus btn-addtocart" >
-                <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
-            </div>
-            <div className="counter"></div>
-            <div className="minus btn-removefromcart" >
-                <i className="fas fa-minus i-card" onClick={remove_pack_from_cart}></i>
-            </div>
-        </div>       */}
-        
-        {/* <div className="more-info"><i className="fas fa-info i-card"></i></div> */}
     </div>
-    <div className='card-more-info' ><i className="far fa-question-circle" onMouseOut={hide_info} onMouseOver={show_info}></i></div>
+    <div className='card-more-info' >
+        <i className="far fa-question-circle" onMouseOut={hide_info} onMouseOver={show_info}></i>
+    </div>
  
     </div>
     </>
