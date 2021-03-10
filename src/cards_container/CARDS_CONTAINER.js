@@ -5,9 +5,7 @@ import CARD from '../card/CARD'
 // import rose from '../card/rose.jpeg'
 import items from '../items'
 export default class CARDS_CONTAINER extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
   componentDidUpdate(){
  
  

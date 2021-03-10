@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { $ }  from 'react-jquery-plugin'
 export default function CARD(props) {
   
