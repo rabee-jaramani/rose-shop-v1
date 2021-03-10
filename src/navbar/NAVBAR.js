@@ -10,17 +10,17 @@ export default function NAVBAR(props) {
     function show_about() {
 
         document.querySelector('.hdr-msg-div').classList.add('hide');
-        setTimeout(()=>{document.querySelector('.about-container').classList.add('hide')},0);
+        setTimeout(()=>{document.querySelector('.about-container').classList.add('hide-opacity')},0);
         document.querySelector('.loading').classList.remove('hide')
-        setTimeout(()=>{document.querySelector('.about-container').classList.remove('hide')},2000)
+        setTimeout(()=>{document.querySelector('.about-container').classList.remove('hide-opacity')},2000)
         setTimeout(()=>{document.querySelector('.loading').classList.add('hide')},2000)
     }
     function show_events() {
 
         document.querySelector('.hdr-msg-div').classList.add('hide');
-        setTimeout(()=>{document.querySelector('.events1').classList.add('hide')},0);
+        setTimeout(()=>{document.querySelector('.events1').classList.add('hide-opacity')},0);
         document.querySelector('.loading').classList.remove('hide')
-        setTimeout(()=>{document.querySelector('.events1').classList.remove('hide')},2000)
+        setTimeout(()=>{document.querySelector('.events1').classList.remove('hide-opacity')},2000)
         setTimeout(()=>{document.querySelector('.loading').classList.add('hide')},2000)
     }
   

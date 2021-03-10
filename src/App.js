@@ -13,6 +13,7 @@ import './header_message/header_message_style.css'
 import './about/about_style.css'
 import './events/events_style.css'
 import './loading/loading_style.css'
+import './footer/footer_style.css'
 
 import NAVBAR from './navbar/NAVBAR';
 import CART from './cart/CART'
@@ -23,6 +24,7 @@ import HEADER_MESSAGE from './header_message/HEADER_MESSAGE';
 import ABOUT from './about/ABOUT';
 import EVENTS from './events/EVENTS';
 import LOADING from './loading/LOADING';
+import FOOTER from './footer/FOOTER';
 
 
 class App extends React.Component {
@@ -99,7 +101,7 @@ class App extends React.Component {
         inc_counter={this.inc_counter.bind(this)}
         dec_counter={this.dec_counter.bind(this)}
       />
-        
+        <FOOTER/>
     </div>
    
     </BrowserRouter>
