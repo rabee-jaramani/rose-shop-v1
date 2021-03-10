@@ -65,6 +65,7 @@ font-size: 16px;
     margin-left: 53px !important;
 }
 
+
 .not-available{
     color: rgb(255, 169, 169);
     text-decoration: line-through;
@@ -117,9 +118,11 @@ font-size: 16px;
 @media(max-width:600px){
     .minus i{
         right: 25px;
+        font-size: 22px;
     }
     .plus i{
         right: 60px;
+        font-size: 22px;
     }
 }
 @media(max-width:890px){
@@ -138,13 +141,14 @@ font-size: 16px;
   
 }
 @media(max-width:670px){
+    .limited-stock{
+        margin-left: 33px !important;
+    }
     .plus-counter-minus{
         width: 10vw;
     }
 
-    .plus i,.minus i{
-        font-size: 18   px;
-    }
+   
     .card-title{
         font-size: 13px !important;
        }
@@ -174,12 +178,15 @@ font-size: 16px;
     }
 }
 @media(max-width:566px){
+    .plus i,.minus i{
+        font-size: 12px;
+    }
     .card{
         width: 200px;
         height: 250px;
 
       }
-  .available,.not-available,.limited-stock,.plus i,.minus i{
+  .available,.not-available,.limited-stock{
           font-size: 1.58vw;
       }
 
@@ -238,4 +245,5 @@ font-size: 16px;
         font-size: 8px;
     
     }
+
 }
