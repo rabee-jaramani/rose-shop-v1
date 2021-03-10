@@ -1,13 +1,14 @@
 .cart-menu{
-    width: 20px;
-    height: 20px;
-    background:linear-gradient(to bottom,rgb(242, 201, 132),rgb(197, 0, 115));
+    width: 500px !important;
+    height: inherit !important;
+    background:linear-gradient(to bottom,rgb(165, 165, 165),rgb(207, 207, 207));
     position: fixed;
     left: 150%;
     top: 80%;
     border-radius: 50%;
     transition: .9s;
     z-index: 200;
+    padding-bottom: 150px;
 }
 .close-icon{
     position: absolute;
@@ -16,7 +17,7 @@
     cursor: pointer;
 }
 .close-icon i{
-    color: white;
+    color: rgb(68, 68, 68);
     font-size: 30px;
 }
 .show-cart-menu{
@@ -30,23 +31,23 @@
 }
 .cart-title{
     position: absolute;
-    right: 45%;
-    color: white;
+    left: 10px;
+    color: black;
     font-size: 25px;
 }
 .total-title{
     position: absolute;
-    left: 100px;
-    top: 40px;
-    color: white;
+    right: 130px;
+    bottom: 80px;
+    color: black;
     font-size: 20px;
     margin-right: 10px;
 }
 .total-aed{
     position: absolute;
-    right: 110px;
-    top: 40px;
-    color: white;
+    right: 50px;
+    bottom: 80px;
+    color: black;
     font-size: 20px;
     background: rgb(255, 255, 255,.2);
 }
@@ -54,14 +55,14 @@
     position: absolute;
     right: 42%;
     top: 90px;
-    color: white;
+    color: black;
     font-size: 25px;
 }
 .cart-details{
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 130px;
+    top: 30px;
     background-color: rgb(255, 255, 254,.3);
 }
 .buttons-div{
@@ -73,18 +74,23 @@
     cursor: pointer;
 }
 .buttons-div div{
-    background-color: white;
-    width: 100px;
+    background-color: rgb(255, 255, 255);
+    width: 180px;
     text-align: center;
     padding: 8px 0;
-    color: rgb(197, 0, 115);
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     box-shadow: rgb(0, 0, 0) 1px 1px 2px 0px;
     transition: ease-in-out 0.3s;
 }
 .buttons-div div:hover{
-    background-color: rgb(230, 204, 134);
+    background-color: rgb(133, 133, 133);
     transform: translateY(-3px);
     box-shadow: black 3px 5px 8px 0px;
 
+}
+@media(max-width:600px){
+    .cart-menu{
+        width: 90% !important;
+    }
 }

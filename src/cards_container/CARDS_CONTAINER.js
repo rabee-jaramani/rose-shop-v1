@@ -23,6 +23,7 @@ export default class CARDS_CONTAINER extends React.Component {
                   item_price={item.item_price}
                   item_stock={item.item_stock}
                   item_qty={0}
+                  item_img={item.image}
                   image={item.image}
                   info={item.info}
                   inc_counter={this.props.inc_counter}

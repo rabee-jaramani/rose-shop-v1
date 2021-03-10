@@ -67,8 +67,9 @@ export default function CART_ITEM(props) {
                 <div className='item-name'>{props.name}</div>
                 <div className='item-price'>{props.price}</div>
                 <div className='item-qty'>{props.qty}</div>
-                <div className='plus' onClick={add_pack_to_cart}><i className="fas fa-plus i-card "></i></div>
-                <div className='minus' onClick={remove_pack_from_cart}><i className="fas fa-minus i-card"></i></div>   
+                <div className='plus' onClick={add_pack_to_cart}><i className="fas fa-plus  "></i></div>
+                <div className='minus' onClick={remove_pack_from_cart}><i className="fas fa-minus "></i></div>  
+                <img className='image' src={props.img} alt=""/> 
             </div> 
         </>
     )

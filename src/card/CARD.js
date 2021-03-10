@@ -18,6 +18,7 @@ export default function CARD(props) {
         let newitem={
             prod_name:props.item_name,
             prod_price:props.item_price,
+            prod_img:props.item_img,
             prod_qty:1
         };
         //check if the item is already in the cart
