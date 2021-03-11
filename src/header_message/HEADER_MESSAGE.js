@@ -7,9 +7,9 @@ function scroll() {
     // setTimeout(()=>{window.scrollTo({top: 650, behavior: 'smooth'})},100);
     document.querySelector('.hdr-msg-div').classList.add('move-up-anim');
     
-    setTimeout(()=>{document.querySelector('.cards-container').classList.add('hide-opacity')},0);
+    setTimeout(()=>{document.querySelector('.cards-main').classList.add('hide-opacity')},0);
     document.querySelector('.loading').classList.remove('hide')
-    setTimeout(()=>{document.querySelector('.cards-container').classList.remove('hide-opacity')},2000)
+    setTimeout(()=>{document.querySelector('.cards-main').classList.remove('hide-opacity')},2000)
     setTimeout(()=>{document.querySelector('.loading').classList.add('hide')},2000)
     
     setTimeout(()=>{document.querySelector('.hdr-msg-div').classList.add('hide');},1000);

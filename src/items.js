@@ -5,7 +5,8 @@ const items=[
     item_price:100,
     image:'/images/rose1.jpg',
     item_stock:0,
-    info:'Lorem Ipsum is simply dummy text of the printingLorem Ipsum is simply dummy text of the printingLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
+    info:'Hybrid tea roses, the products of a cross between hybrid perpetual roses and old-fashioned tea roses, are rose royalty. They are the most popular roses in the world and perhaps the most popular flowers. Hybrid teas have all the virtues you look for in a flower: beauty, fragrance, and easy care.'
+
     }
     ,
     {
@@ -14,7 +15,8 @@ const items=[
         item_price:19,
         image:'/images/rose2.jpg',
         item_stock:8,
-        info:'text ever since the 1500s, when an unknown printer took a gal ever since the 1500s, when an unknown printer took a gal ever since the 1500s, when an unknown printer took a gal ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has'
+        info:'Polyantha roses are compact, dwarf shrubs with closely packed bunches of small usually semi-double or double flowers in colours including white, cream, peach, shades of pink or red. Sprays will flower throughout the summer and these roses grow from 30-90cm (2-3ft) high.'
+        
     }
     ,
     {
@@ -23,7 +25,7 @@ const items=[
         item_price:99,
         image:'/images/rose3.jpg',
         item_stock:1,
-        info:'survived not only five centuries, but also the leap into electronicfive centuries, but also the leap into electronicfive centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in'
+        info:'Produced by crossing hybrid tea roses and polyantha roses, floribundas are typically smaller and bushier than hybrid tea roses, and more upright than polyanthas. If youre seeking roses for fragrance, take a look at our pick of the top roses to grow for scent. More on growing roses: Guide to growing roses in pots.'
     }
     ,
     {
@@ -32,7 +34,7 @@ const items=[
         item_price:180,
         image:'/images/rose4.jpg',
         item_stock:10,
-        info:'the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and morecontaining Lorem Ipsum passages, and morecontaining Lorem Ipsum passages, and morecontaining Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+        info:'A patio rose is a miniature floribunda rose that can come in a variety of styles. ... Patio roses do not require too much maintenance and are smaller than the average rose (the clue is in the name!). These types of roses are actually good for slope and erosion control.'
     }
     ,
     {
@@ -50,7 +52,8 @@ const items=[
         item_price:200,
         image:'/images/rose6.jpg',
         item_stock:1,
-        info:'making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College Richard McClintock, a Latin professor at Hampden-Sydney College Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of'
+        info:'Climbing roses for north-facing or shady walls · English Shrub roses make good climbers and will flower on a north-facing wall, pillar or arch. '
+
     }
     ,
     {
@@ -68,7 +71,7 @@ const items=[
         item_price:10,
         image:'/images/rose8.jpg',
         item_stock:10,
-        info:'literature, discovered the undoubtable source. Lorem Ipsum comes from sthe undoubtable source. Lorem Ipsum comes from sthe undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum'
+        info:'Rosa × damascena, more commonly known as the Damask rose, or sometimes as the rose of Castile, is a rose hybrid, derived from Rosa gallica and Rosa moschata. Further DNA analysis has shown that a third species, Rosa fedtschenkoana, is associated with the Damask rose'
     }
     ,
     {

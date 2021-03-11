@@ -5,10 +5,11 @@ export default function NAVBAR(props) {
 
     function show_home() {
         document.querySelector('.hdr-msg-div').classList.remove('hide');
+        document.querySelector('.cart-main').classList.remove('show');
         // document.querySelector('.hdr-msg-div').classList.add('move-down');
     }
     function show_about() {
-
+        document.querySelector('.cart-main').classList.remove('show');
         document.querySelector('.hdr-msg-div').classList.add('hide');
         setTimeout(()=>{document.querySelector('.about-container').classList.add('hide-opacity')},0);
         document.querySelector('.loading').classList.remove('hide')
@@ -16,7 +17,7 @@ export default function NAVBAR(props) {
         setTimeout(()=>{document.querySelector('.loading').classList.add('hide')},2000)
     }
     function show_events() {
-
+        document.querySelector('.cart-main').classList.remove('show');
         document.querySelector('.hdr-msg-div').classList.add('hide');
         setTimeout(()=>{document.querySelector('.events1').classList.add('hide-opacity')},0);
         document.querySelector('.loading').classList.remove('hide')

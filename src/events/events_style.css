@@ -25,7 +25,7 @@ height: 100px;
     font-family: 'Raleway', sans-serif; 
     font-size: 4vw;
     color: white;
-    background: linear-gradient(to right, rgba(255, 0, 128, 0.486),rgb(255, 0, 76));
+    background: linear-gradient(to right, rgba(255, 0, 119, 0.486),rgb(255, 0, 128));
     margin-top: 15vw;
     animation: hdr_msg_anim 2s;
     transition: 1s;

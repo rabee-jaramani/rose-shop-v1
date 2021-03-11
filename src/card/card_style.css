@@ -7,9 +7,7 @@
     --main_color:rgb(204, 0, 112);
     --gold_color:rgb(214, 155, 66);
 }
-body{
-    background-color: rgba(39, 27, 34, 0.3);
-}
+
 .disable{
     pointer-events: none;
     opacity: 0.4;
@@ -35,6 +33,7 @@ transform: scale(1.05,1.05);
     height: 85%;
     margin: 0 !important;
     border-radius: 5px 5px 0 0;
+    
 }
 .card-details{
     background-color:var(--main_color);

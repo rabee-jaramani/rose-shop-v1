@@ -1,6 +1,6 @@
 
 body{
-    background-color: gray;
+    background-color: rgb(248, 194, 132);
 }
 .disable{
     pointer-events: none;
@@ -48,6 +48,7 @@ body{
     top: 80%;
     cursor: pointer;
     display: none;
+    z-index: 100;
 }
 .cart-main i{
     color: honeydew;

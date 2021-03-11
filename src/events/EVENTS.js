@@ -3,7 +3,7 @@ import ReactPlayer from "react-player"
 export default function EVENTS() {
     return (
         <div className='events1'>
-        <div className='events-title'>Our Events In Last Year</div>
+        <div className='events-title'>Recent Events</div>
             <div className='videos-container'>
 
                 <div className='video'>
