@@ -14,6 +14,7 @@ import './about/about_style.css'
 import './events/events_style.css'
 import './loading/loading_style.css'
 import './footer/footer_style.css'
+// import {$} from 'react-jquery-plugin'
 
 import NAVBAR from './navbar/NAVBAR';
 import CART from './cart/CART'
@@ -36,7 +37,6 @@ class App extends React.Component {
       total:0
     }
   }
-
   inc_counter(){
     this.setState({
       counter:this.state.counter+1
@@ -76,13 +76,13 @@ class App extends React.Component {
     <NAVBAR counter={this.state.counter}/>
 
     <LOADING/>
-      <HEADER/>
+      <HEADER  path='/' />
      {/* <HEADER_MESSAGE/> */}
       <Route path='/' render={props=><HEADER_MESSAGE/>}/>
-      <Route path='/about' render={props=><ABOUT/>}/>
-      <Route path='/events' render={props=><EVENTS/>}/>
+      <Route  path='/about'  render={props=><ABOUT/> }/>
+      <Route  path='/events'  render={props=><EVENTS/>}/>
       
-      <Route path='/cards' render={props =><CARDS_CONTAINER 
+      <Route  path='/cards'  render={props =><CARDS_CONTAINER 
           products={this.state.products}
           add_existing_item_tocart={this.add_existing_item_tocart.bind(this)}
           add_new_item_tocart={this.add_new_item_tocart.bind(this)}

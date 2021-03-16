@@ -1,7 +1,7 @@
 // import { render } from '@testing-library/react';
 import React from 'react'
 import CARD from '../card/CARD'
-import {$} from 'react-jquery-plugin'
+// import {$} from 'react-jquery-plugin'
 // import rose from '../card/rose.jpeg'
 import items from '../items'
 export default class CARDS_CONTAINER extends React.Component {
@@ -31,7 +31,8 @@ state={
                 <input placeholder='search...' onChange={this.onChangeHandler}></input>
                 <i class="fas fa-search" onClick={this.searchHandler}></i>
             </div>
-            <div className='cards-container' id='cards'>
+            <div className='cards-container' id='cardss'>
+              
               {
                 this.state.items_.filter((item)=>{
                   if(this.state.inputValue===""){
@@ -40,6 +41,9 @@ state={
                   if(item.item_name.toLocaleLowerCase().includes(this.state.inputValue.toLocaleLowerCase())){
                     return item
                   }
+                 else{
+                   return ''
+                 }
                 }).map((item)=>(
                   <CARD 
                   key={item.id}

@@ -3,8 +3,9 @@
     height: inherit !important;
     background:linear-gradient(to bottom,rgb(165, 165, 165),rgb(207, 207, 207));
     position: fixed;
-    left: 150%;
-    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: -50%;
     border-radius: 50%;
     transition: .9s;
     z-index: 200;
@@ -21,11 +22,11 @@
     font-size: 30px;
 }
 .show-cart-menu{
-    left: 50%;
+   
     top: 50%;
     width: 350px;
     height: 400px;
-    transform: translate(-50%,-50%);
+    
     border-radius: 10px;
     transition: .9s;
 }

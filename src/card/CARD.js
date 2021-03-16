@@ -4,15 +4,17 @@ export default function CARD(props) {
   
 
      function show_info(e) {
-        
-        // document.getElementById(`${props.id}`).classList.add('show-item');
-        // document.getElementById('0').classList.add('show-item');
-        var list=document.querySelectorAll('.item-info');
-       list[props.id].classList.add('show-info');
+        document.getElementById(`${props.id}`).childNodes[0].classList.add('rotate-anim');
+         document.getElementById(`${props.id}`).childNodes[0].classList.add('show-info');
+         setTimeout(()=>{document.getElementById(`${props.id}`).childNodes[1].classList.add('rotate-anim')},0)
+         setTimeout(()=>{document.getElementById(`${props.id}`).childNodes[1].classList.add('hide-opacity')},0)
+         
       }
       function hide_info() {
-        var list=document.querySelectorAll('.item-info');
-        list[props.id].classList.remove('show-info');
+        document.getElementById(`${props.id}`).childNodes[0].classList.remove('rotate-anim');
+        document.getElementById(`${props.id}`).childNodes[0].classList.remove('show-info');
+        document.getElementById(`${props.id}`).childNodes[1].classList.remove('rotate-anim');
+        document.getElementById(`${props.id}`).childNodes[1].classList.remove('hide-opacity');
       }
     function add_pack_to_cart(){
         let newitem={
@@ -34,10 +36,15 @@ export default function CARD(props) {
         else{
         props.add_new_item_tocart(newitem);
         
-        var minus_list=document.querySelectorAll('.minus-icon');
-        console.log("ID>> "+props.id);
-        console.log("MINUS>> "+minus_list.length)
-            minus_list[props.id].classList.remove('hide');
+        // var minus_list=document.querySelectorAll('.minus-icon');
+        // console.log("CARD ID >> "+props.id);
+        // console.log("MINUS LIST >> "+minus_list.length)
+        // if(minus_list.length<props.id){
+        //     minus_list[minus_list.length-1].classList.remove('hide');
+        // }
+        // else{
+        //     minus_list[props.id].classList.remove('hide');
+        // }
     }
         $('.btn-addtocart').addClass('disable');
         $('.pack').addClass('pack-animation');
@@ -58,50 +65,50 @@ export default function CARD(props) {
         
     }
 
-    function remove_pack_from_cart(){
-        console.log('GENER Counter>> '+props.counter);
-        if(props.counter===0){
-            alert('cart is empty');
-        }
-        else
-        if(!props.products.find(x=> x.prod_name===props.item_name)){
-            alert('this item not in the cart');
-            }
+    // function remove_pack_from_cart(){
+    //     console.log('GENER Counter>> '+props.counter);
+    //     if(props.counter===0){
+    //         alert('cart is empty');
+    //     }
+    //     else
+    //     if(!props.products.find(x=> x.prod_name===props.item_name)){
+    //         alert('this item not in the cart');
+    //         }
         
-        else{
+    //     else{
        
-        if(props.products.find(x=> x.prod_name===props.item_name)){
-            var total=props.total;
-            let list=props.products;
-            var index=props.products.findIndex(x=> x.prod_name===props.item_name);
-            list[index].prod_qty=list[index].prod_qty-1;
-            total=total-list[index].prod_price;
-            if(list[index].prod_qty===0){
-                list.splice(index,1);
-            }
-            props.add_existing_item_tocart(list,total);
-            props.dec_counter();
+    //     if(props.products.find(x=> x.prod_name===props.item_name)){
+    //         var total=props.total;
+    //         let list=props.products;
+    //         var index=props.products.findIndex(x=> x.prod_name===props.item_name);
+    //         list[index].prod_qty=list[index].prod_qty-1;
+    //         total=total-list[index].prod_price;
+    //         if(list[index].prod_qty===0){
+    //             list.splice(index,1);
+    //         }
+    //         props.add_existing_item_tocart(list,total);
+    //         props.dec_counter();
             
-        }
-        $('.btn-removefromcart').addClass('disable');
-        $('.pack').addClass('pack-animation-remove');
-        $('.cart-icon').addClass('cart-animation');
-        $('.cart-main').addClass('cart-animation');
+    //     }
+    //     $('.btn-removefromcart').addClass('disable');
+    //     $('.pack').addClass('pack-animation-remove');
+    //     $('.cart-icon').addClass('cart-animation');
+    //     $('.cart-main').addClass('cart-animation');
         
-        // props.setcounter(props.counter-1);
-        setTimeout(dely_item_minus,2000);
-        }
-    }
-    function dely_item_minus(){
-        $('.pack').removeClass('pack-animation-remove');
-        $('.btn-removefromcart').removeClass('disable');
-        $('.cart-icon').removeClass('cart-animation');
-        $('.cart-main').removeClass('cart-animation'); 
-    }
+    //     // props.setcounter(props.counter-1);
+    //     setTimeout(dely_item_minus,2000);
+    //     }
+    // }
+    // function dely_item_minus(){
+    //     $('.pack').removeClass('pack-animation-remove');
+    //     $('.btn-removefromcart').removeClass('disable');
+    //     $('.cart-icon').removeClass('cart-animation');
+    //     $('.cart-main').removeClass('cart-animation'); 
+    // }
 
     return (
         <>
-        <div className='card' id={props.id}>
+        <div className='card'  id={props.id}>
     
                   <div className='item-info'>
                 <div >Name: {props.item_name}</div>
@@ -128,9 +135,9 @@ export default function CARD(props) {
         <div className="plus btn-addtocart" >
             <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
         </div>
-        <div className="minus btn-removefromcart" >
+        {/* <div className="minus btn-removefromcart" >
             <i className="fas minus-icon fa-minus i-card hide" onClick={remove_pack_from_cart}></i>
-        </div>
+        </div> */}
     </div> 
     :
     <div className="plus-counter-minus">
@@ -138,14 +145,14 @@ export default function CARD(props) {
             <div className="plus btn-addtocart" >
                 <i className="fas fa-plus i-card" onClick={add_pack_to_cart}></i>
             </div>
-            <div className="minus btn-removefromcart" >
-                <i className="fas minus-icon fa-minus i-card hide" onClick={remove_pack_from_cart}></i>
-            </div>
+            {/* <div className="minus btn-removefromcart" >
+                <i className="fas minus-icon fa-minus i-card hide" onClick={remove_pack_from_cart}>{props.id}</i>
+            </div> */}
         </div> 
     }
     </div>
-    <div className='card-more-info' >
-        <i className="far fa-question-circle" onMouseOut={hide_info} onMouseOver={show_info}></i>
+    <div className='card-more-info'  onMouseOut={hide_info} onMouseOver={show_info}>
+        <i className="far fa-question-circle"></i>
     </div>
  
     </div>

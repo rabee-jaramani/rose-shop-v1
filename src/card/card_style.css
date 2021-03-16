@@ -21,7 +21,7 @@
   height: 400px;
   border-radius: 10px;
   margin: 4vw auto;
-  background-color: var(--gold_color);
+  background-color: var(--main_color);
   position: relative;
   transition: .3s;
 }
@@ -233,6 +233,13 @@ font-size: 16px;
 .show-info{
     opacity: 1;
 }
+.hide-opacity{
+    opacity: 0;
+}
+.rotate-anim{
+    animation: rotate_anim 1s .1s;
+    transition: 1s;
+}
 @media(max-width:700px){
     .item-info div{
         font-size: 11px;
@@ -245,4 +252,9 @@ font-size: 16px;
     
     }
 
+}
+@keyframes rotate_anim{
+    0%{
+        transform: rotateY(180deg);
+    }
 }
