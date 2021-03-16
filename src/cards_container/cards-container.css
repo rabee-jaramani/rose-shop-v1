@@ -1,9 +1,11 @@
 .cards-main{
     margin-top: 100px;
+    padding-bottom: 7rem;
 }
 .cards-container{
     
    margin-left: 5% !important;
+   
     width: 90%;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(358px, 1fr) );

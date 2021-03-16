@@ -1,9 +1,11 @@
 import React from 'react'
+// import {$} from 'react-jquery-plugin'
 
 export default function FOOTER() {
+
     return (
         <>
-            <div className='footer'>
+            <div className='footer' id='footer'>
            
             <div className='flex1'>
             <i class="far fa-registered"></i>
