@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import CART_ITEM from '../cart_items/CART_ITEM'
 
@@ -18,6 +19,7 @@ export default function CART_MENU(props) {
                     <div className='cart-details'>
                         {props.products.map((product)=>( 
                             <CART_ITEM
+                            
                             add_existing_item_tocart={props.add_existing_item_tocart}
                             name={product.prod_name}
                             price={product.prod_price}
@@ -32,7 +34,9 @@ export default function CART_MENU(props) {
                          
                     </div>
                 <div className='buttons-div'>
+                    <Link to='/checkout' onClick={close_cart_menu}>
                     <div className='proceed-btn'>Checkout</div>
+                    </Link>
                     <div className='cancel-btn' onClick={close_cart_menu}>Continue Shopping</div>
                 </div>
             </div>

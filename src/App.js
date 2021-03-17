@@ -14,6 +14,8 @@ import './about/about_style.css'
 import './events/events_style.css'
 import './loading/loading_style.css'
 import './footer/footer_style.css'
+import 'react-credit-cards/es/styles-compiled.css'
+import './credit-card/credit_card_style.css'
 // import {$} from 'react-jquery-plugin'
 
 import NAVBAR from './navbar/NAVBAR';
@@ -26,6 +28,7 @@ import ABOUT from './about/ABOUT';
 import EVENTS from './events/EVENTS';
 import LOADING from './loading/LOADING';
 import FOOTER from './footer/FOOTER';
+import CHECKOUT from './credit-card/CHECKOUT';
 
 
 class App extends React.Component {
@@ -81,6 +84,10 @@ class App extends React.Component {
       <Route path='/' render={props=><HEADER_MESSAGE/>}/>
       <Route  path='/about'  render={props=><ABOUT/> }/>
       <Route  path='/events'  render={props=><EVENTS/>}/>
+      <Route  path='/checkout'  render={props=><CHECKOUT
+      total={this.state.total}
+      products={this.state.products}
+      />}/>
       
       <Route  path='/cards'  render={props =><CARDS_CONTAINER 
           products={this.state.products}

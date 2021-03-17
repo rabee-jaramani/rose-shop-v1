@@ -6,13 +6,15 @@
     display: grid;
     grid-template-columns: 1fr .5fr .5fr .5fr .5fr 1fr;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .item-name,.item-price,.item-qty,.image{
-    color: white;
+    color: black;
     font-size: 15px;
     
 }
+
+
 .item-name,.item-price,.item-qty{
     padding-top: 30px;
 }
@@ -20,11 +22,13 @@
     font-size: 17px;
     margin-top: 30px;
     position: static;
+    color: rgb(34, 34, 34);
 }
 .cart-item >.minus> i{
     font-size: 17px;
     margin-top: 30px;
     position: static;
+    color: rgb(34, 34, 34);
 }
 .image{
     width: 70px;

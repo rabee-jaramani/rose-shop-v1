@@ -1,0 +1,101 @@
+.checkout-container{
+    position: relative;
+    width: 350px;
+     background:linear-gradient(to bottom,rgba(255, 255, 255, 0.5),rgb(255, 255, 255));
+     border-radius: 5px;
+     margin-left: 50%;
+     transform: translate(-50%);
+     margin-top: 15vw;
+     padding: 10px 30px 30px 30px;
+     
+}
+.checkout-title{
+    color: black;
+    text-align: center;
+    padding-bottom:  5px;
+}
+.checkout-steps{
+display: flex;
+justify-content: space-between;
+padding-bottom: 10px;
+}
+.checkout-steps div{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(241, 95, 168);
+    color: rgb(187, 187, 187);
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 5px;
+}
+.step-focused{
+    color: white !important;
+    background-color: rgb(255, 0, 128) !important;
+    transform: scale(1.2);
+    transition: .5s;
+}
+.personal-info,.credit-card,form{
+    display: flex;
+    flex-direction: column;
+}
+.personal-info{
+    transition: .5s;
+}
+.checkout-container input,label{
+    background: transparent;
+    height: 2rem;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+.checkout-btn{
+    border: none;
+    color: rgb(216, 216, 216);
+    background: linear-gradient(to right, rgba(255, 0, 128, 0.486),rgb(255, 0, 76));
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 10px;
+    width: 45%;
+}
+.checkout-btn:hover{
+    background: linear-gradient(to right, rgb(255, 0, 128),rgb(255, 0, 76,.4));
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.credit-card{
+    position: relative;
+    right: -400px;
+}
+.move-in{
+    animation: move_in 1s;
+    right: 0;
+}
+@keyframes move_in{
+    0%{
+        right: -400px;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+.next-prev-btns{
+    display: flex;
+    justify-content: space-between;
+}
+.checkout-item{
+    display: flex;
+    justify-content: space-between;
+}
+.ch-item-name{
+    margin-top: 30px;
+}
+.review{
+    position: relative;
+}
+.ch-total{
+margin:40px 0 20px 120px
+
+}

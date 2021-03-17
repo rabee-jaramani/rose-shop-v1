@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "animate.css": "^4.1.1",
     "react": "^17.0.1",
+    "react-credit-cards": "^0.8.3",
     "react-dom": "^17.0.1",
     "react-image": "^4.0.3",
     "react-jquery-plugin": "^1.1.7",
