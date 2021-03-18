@@ -16,6 +16,8 @@ import './loading/loading_style.css'
 import './footer/footer_style.css'
 import 'react-credit-cards/es/styles-compiled.css'
 import './credit-card/credit_card_style.css'
+
+
 // import {$} from 'react-jquery-plugin'
 
 import NAVBAR from './navbar/NAVBAR';
@@ -66,8 +68,7 @@ class App extends React.Component {
    
   }
   componentDidMount(){
-    // document.querySelector('.loading').classList.add('hide');
-  }
+}
   componentDidUpdate(){
     // console.log('PRODUCTS >> '+this.state.products[0].prod_qty);
   }

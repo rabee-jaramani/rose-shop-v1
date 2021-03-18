@@ -37,11 +37,10 @@ padding-bottom: 10px;
 .personal-info,.credit-card,form{
     display: flex;
     flex-direction: column;
-}
-.personal-info{
     transition: .5s;
 }
-.checkout-container input,label{
+
+.checkout-container input,label,select{
     background: transparent;
     height: 2rem;
     border: none;
@@ -99,13 +98,14 @@ padding-bottom: 10px;
 margin:40px 0 20px 120px
 
 }
-.validation{
+.validation,.personal-info-v{
     color: rgb(241, 0, 0);
     font-size: 13px;
     height: 15px;
     border: none;
     margin-bottom: 15px;
 }
+
 .valid{
     color: rgb(4, 131, 0);
     font-size: 13px;
@@ -136,5 +136,8 @@ margin:40px 0 20px 120px
     100% {
       transform: rotate(360deg);
     }
+  }
+  .dropdown-placeholder{
+      color: rgb(255, 9, 9) !important;
   }
   

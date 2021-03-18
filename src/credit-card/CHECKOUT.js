@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import Cards from 'react-credit-cards'
 import validator from 'validator'
+import JSON1 from '../countries.json'
+// import {$} from 'react-jquery-plugin'
 
 export default function CHECKOUT(props) {
 
@@ -10,10 +12,49 @@ export default function CHECKOUT(props) {
     const [cvc, setCvc] = useState('');
     const [focus, setFocus] = useState('');
     const [validation_message, setValidation_message] = useState('');
+    // //////////////////////////////////////////////////////
+                //get data from json file
+const [data, setData] = useState([])
+//get countries from data
+const [countries, setCountries] = useState([]);
+//get country from user selection
+const [country, setCountry] = useState('')
+//get cities from data depending on user selection
+const [cities, setCities] = useState([]);
+
+ function get_countries(){
+      var result=[];
+            for(var i in JSON1){
+                result.push([i, JSON1[i]]);
+            }
+            setData(result);
+            var list_cnt=[];
+            for(var j=0;j<result.length;j++){
+              list_cnt.push(result[j][0]);
+            }
+            setCountries(list_cnt);
+  }
+
+    function citiesHandler() {
+            var ctsss=[]
+            for (let k = 0; k < data.length; k++) {
+              if(data[k][0]===country){
+                ctsss=data[k][1];
+              }
+            }
+            setCities(ctsss);
+        }
+
+    // /////////////////////////////////////////////////////
+
+    function submit() {
+        return ''
+    }
 
     function credit_validation(number) {
         
         var valid=validator.isCreditCard(number); 
+        
             if(!valid){
             return 'Card is invalid'
             }
@@ -24,11 +65,11 @@ export default function CHECKOUT(props) {
     }
 
     function to_step_2(e) {
-        document.querySelector('.personal-info').classList.toggle('hide');
-        document.querySelector('.credit-card').classList.toggle('hide');
-        document.querySelector('.credit-card').classList.toggle('move-in');
-        document.getElementById('checkout-steps').childNodes[0].classList.toggle('step-focused');
-        document.getElementById('checkout-steps').childNodes[1].classList.toggle('step-focused');
+            document.querySelector('.personal-info').classList.toggle('hide');
+            document.querySelector('.credit-card').classList.toggle('hide');
+            document.querySelector('.credit-card').classList.toggle('move-in');
+            document.getElementById('checkout-steps').childNodes[0].classList.toggle('step-focused');
+            document.getElementById('checkout-steps').childNodes[1].classList.toggle('step-focused');
         
     }
      function to_step_3(e) {
@@ -80,14 +121,37 @@ export default function CHECKOUT(props) {
             </div>
             <div className='personal-info'>
             
-            <input type='text' placeholder='First Name'></input>
-            <input type='text' placeholder='Last Name'></input>
-            <input type='email' placeholder='Email'></input>
-            <input type='text' placeholder='Country'></input>
-            <input type='text' placeholder='City'></input>
-            <input type='text' placeholder='Address'></input>
-            <input type='text' placeholder='Mobile'></input>
-            <div className='checkout-btn' onClick={to_step_2}>Next</div>
+                        <input type='text' placeholder='First Name' id='fname'></input>
+                        <div className='error-v-error' id='fname_e'></div>
+
+                        <input type='text' placeholder='Last Name' id='lname'></input>
+                        <div className='error-v-error' id='lname_e'></div>
+
+                        <input type='email' placeholder='Email' id='email'></input>
+                        <div className='error-v-error' id='email_e'></div>
+
+
+                   {/* /////////////////////////////////////// */}
+                        <select id='country' onClick={get_countries}  onChange={e=>setCountry(e.target.value)}>
+                        <option className='dropdown-placeholder' value="" disabled selected>Select your country</option>
+                            {countries.map((country)=>{
+                            return <option > {country} </option>
+                            })}              
+                        </select>
+
+                        <select id='city' onClick={citiesHandler}>
+                        <option className='dropdown-placeholder' value="" disabled selected>Select your city</option>
+                        {  cities.map((city)=>{ return<option>{city}  </option> })    }         
+                        </select> 
+                   {/* ///////////////////////////////////////////// */}
+
+                        <input type='text' placeholder='Address' id='address'></input>
+                        <div className='error-v-error' id='address_e'></div>
+
+                        <input type='text' placeholder='Mobile' id='mobile'></input>
+                        <div className='error-v-error' id='mobile_e'></div>
+
+                        <div className='checkout-btn' onClick={to_step_2}>Next</div>
             </div>
             <div className='credit-card hide'>
             <Cards
@@ -117,13 +181,14 @@ export default function CHECKOUT(props) {
                 onFocus={e=>setFocus(e.target.name)}
                 />
                 
-                  <input
+                <input
                 type='text'
                 name='expiry'
                 placeholder='MM/YY Expiry'
                 value={expiry}
                 onChange={e=>setExpiry(e.target.value)}
                 onFocus={e=>setFocus(e.target.name)}
+                size="4"
                 />
                 <input
                 type='tel'
@@ -167,7 +232,7 @@ export default function CHECKOUT(props) {
              <div className='ch-total'>TOTAL: {props.total} AED</div>
              <div className='next-prev-btns'>
                 <div className='checkout-btn' onClick={back_step_2}>Prev</div>
-                <div className='checkout-btn' >Submit</div>
+                <div className='checkout-btn' onClick={submit}>Submit</div>
                 </div>
             </div>
             </div>
