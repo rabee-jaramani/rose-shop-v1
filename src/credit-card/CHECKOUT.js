@@ -121,7 +121,7 @@ const [cities, setCities] = useState([]);
         }
         if( expiry.length>4 || !/^[0-9]*$/.test(expiry))  {
             setExpiry(expiry.slice(0,expiry.length-1));
-            setValidation_message('wrong expity date > MMYY');
+            
         }
         if(cvc.length>3 || !/^[0-9]*$/.test(cvc)){
             setCvc(cvc.slice(0,cvc.length-1));
