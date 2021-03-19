@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import Cards from 'react-credit-cards'
 import validator from 'validator'
 import JSON1 from '../countries.json'
@@ -109,7 +109,25 @@ const [cities, setCities] = useState([]);
         document.getElementById('checkout-steps').childNodes[2].classList.toggle('step-focused');
         
     }
-    
+    useEffect(()=>{
+        if(number.length>40 || /\D/.test(number)){
+            setNumber(number.slice(0,number.length-1));
+            setValidation_message('card number max chars is 40')
+        }
+        if(!(/^(?! )[A-Za-z\s]*$/.test(name))){
+            
+            setName(name.slice(0,name.length-1));
+            setValidation_message('Name can be letters only');
+        }
+        if( expiry.length>4 || !/^[0-9]*$/.test(expiry))  {
+            setExpiry(expiry.slice(0,expiry.length-1));
+            setValidation_message('wrong expity date > MMYY');
+        }
+        if(cvc.length>3 || !/^[0-9]*$/.test(cvc)){
+            setCvc(cvc.slice(0,cvc.length-1));
+
+        }
+    },[name,number,expiry,cvc])
     return (
         <>
         <div className='checkout-container'>
@@ -182,13 +200,12 @@ const [cities, setCities] = useState([]);
                 />
                 
                 <input
-                type='text'
+                type='tel'
                 name='expiry'
                 placeholder='MM/YY Expiry'
                 value={expiry}
                 onChange={e=>setExpiry(e.target.value)}
                 onFocus={e=>setFocus(e.target.name)}
-                size="4"
                 />
                 <input
                 type='tel'
@@ -201,7 +218,11 @@ const [cities, setCities] = useState([]);
                 {
                   (validation_message==='checking')?
                   <div class="lds-dual-ring"></div>:
-                  (validation_message==='Card is invalid')?
+                  (validation_message==='Card number is invalid'
+                  ||validation_message==='Card is invalid'
+                  ||validation_message==='card number max chars is 40'
+                  ||validation_message==='Name can be letters only'
+                  )?
                   <div className='validation'>{validation_message}</div>:
                   <div className='valid'>{validation_message}</div>
                   
