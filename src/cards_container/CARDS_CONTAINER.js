@@ -4,6 +4,7 @@ import CARD from '../card/CARD'
 // import {$} from 'react-jquery-plugin'
 // import rose from '../card/rose.jpeg'
 import items from '../items'
+import valantine_items from '../valantine'
 export default class CARDS_CONTAINER extends React.Component {
 
 state={
@@ -13,6 +14,20 @@ state={
   items_:items
 }
 
+showCats=(e)=>{
+  document.querySelector('.fa-arrow-circle-down').classList.toggle('move-cat-tab-i')
+  document.querySelector('.cat-tab').classList.toggle('move-cat-tab');
+  document.querySelector('.cat-div').classList.toggle('visibil-true');
+  document.querySelector('.cat-1').classList.toggle('add-anim-1');
+  document.querySelector('.cat-2').classList.toggle('add-anim-2');
+  document.querySelector('.cat-3').classList.toggle('add-anim-3');
+  document.querySelector('.cat-4').classList.toggle('add-anim-4');
+}
+valantine_handler=()=>{
+  this.setState({
+    items_:valantine_items
+  })
+}
   onChangeHandler=(e)=>{
     this.setState({
       inputValue:e.target.value,
@@ -20,8 +35,7 @@ state={
    
   }
 
-  componentDidUpdate(){
-
+  componentDidMount(){
   }
     render(){
     return (
@@ -29,8 +43,18 @@ state={
             <div className='cards-main' id='cards'>
             <div className='search-div'>
                 <input placeholder='search...' onChange={this.onChangeHandler}></input>
-                <i class="fas fa-search" onClick={this.searchHandler}></i>
             </div>
+
+           
+            
+            <div className='cat-div'>
+            
+                  <div className='cat-1' onClick={this.valantine_handler}>Valantine's day</div>
+                  <div className='cat-2 '>Mother's day</div>
+                  <div className='cat-3 '>A birthday</div>
+                  <div className='cat-4 '>I'm sorry</div>
+                </div>
+                <div className='cat-tab' onClick={this.showCats}>Occasions <i class="fas fa-arrow-circle-down "></i></div>
             <div className='cards-container' id='cardss'>
               
               {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function NAVBAR(props) {
 
     function show_home() {
-        document.querySelector('.hdr-msg-div').classList.remove('hide');
+        //document.querySelector('.hdr-msg-div').classList.remove('hide');
         document.querySelector('.cart-main').classList.remove('show');
         // document.querySelector('.hdr-msg-div').classList.add('move-down');
     }
@@ -37,7 +37,7 @@ export default function NAVBAR(props) {
     return (
         <>
        <div className="navbar">
-        <div className="home" onClick={show_home}><Link className='Link' to='/'>Home</Link></div>
+        <div className="home" onClick={show_home}><Link className='Link' to='/cards'>Home</Link></div>
         <div className="about" onClick={show_about}><Link className='Link' to='/about'>About</Link></div>
         <div className="events" onClick={show_events}><Link className='Link' to='/events'>Events</Link></div>
         {/* <Link className='search' to='/cards'>linkkkkkkk</Link> */}
@@ -54,7 +54,7 @@ export default function NAVBAR(props) {
             <i className="fas fa-bars"></i>
             <i className="fas fa-times hide"></i>
         </div>
-        <div className="home-m" onClick={show_home}><Link className='Link' to='/'>Home</Link></div>
+        <div className="home-m" onClick={show_home}><Link className='Link' to='/cards'>Home</Link></div>
         <div className="about-m" onClick={show_about}><Link className='Link' to='/about'>About</Link></div>
         <div className="events-m" onClick={show_events}><Link className='Link' to='/events'>Events</Link></div>
         {/* <div className="search-m">Search</div> */}
