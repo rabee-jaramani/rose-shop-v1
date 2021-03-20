@@ -49,10 +49,10 @@ valantine_handler=()=>{
             
             <div className='cat-div'>
             
-                  <div className='cat-1' onClick={this.valantine_handler}>Valantine's day</div>
-                  <div className='cat-2 '>Mother's day</div>
-                  <div className='cat-3 '>A birthday</div>
-                  <div className='cat-4 '>I'm sorry</div>
+                  <div className='cat-1 '  contenteditable tabindex="1" onClick={this.valantine_handler}>Valantine's day</div>
+                  <div className='cat-2 '  contenteditable tabindex="2">Mother's day</div>
+                  <div className='cat-3 '  contenteditable tabindex="3">A birthday</div>
+                  <div className='cat-4 '  contenteditable tabindex="4">I'm sorry</div>
                 </div>
                 <div className='cat-tab' onClick={this.showCats}>Occasions <i class="fas fa-arrow-circle-down "></i></div>
             <div className='cards-container' id='cardss'>
