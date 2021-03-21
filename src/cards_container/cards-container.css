@@ -76,6 +76,12 @@
     pointer-events: none;
     transition: .5s;
 }
+.focused{
+    background: white !important;
+    color:rgb(204, 0, 112) !important;
+    outline: none;
+    font-style: italic;
+}
 .cat-div div:focus{
     background: white;
     color:rgb(204, 0, 112);
