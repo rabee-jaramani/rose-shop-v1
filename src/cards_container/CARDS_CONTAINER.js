@@ -5,6 +5,10 @@ import CARD from '../card/CARD'
 // import rose from '../card/rose.jpeg'
 import items from '../items'
 import valantine_items from '../valantine'
+import mother_items from '../mother_day'
+import sorry_items from '../sorry'
+import logo from '../logo/logo.png'
+
 export default class CARDS_CONTAINER extends React.Component {
 
 state={
@@ -15,7 +19,7 @@ state={
 }
 
 showCats=(e)=>{
-  document.querySelector('.fa-arrow-circle-down').classList.toggle('move-cat-tab-i')
+  
   document.querySelector('.cat-tab').classList.toggle('move-cat-tab');
   document.querySelector('.cat-div').classList.toggle('visibil-true');
   document.querySelector('.cat-1').classList.toggle('add-anim-1');
@@ -26,6 +30,18 @@ showCats=(e)=>{
 valantine_handler=()=>{
   this.setState({
     items_:valantine_items
+  });
+  document.querySelector('.cat-1').classList.remove('focused');
+}
+sorry_handler=()=>{
+  this.setState({
+    items_:sorry_items
+  });
+  document.querySelector('.cat-1').classList.remove('focused');
+}
+mother_handler=()=>{
+  this.setState({
+    items_:mother_items
   });
   document.querySelector('.cat-1').classList.remove('focused');
 }
@@ -52,15 +68,18 @@ forAll_handler=()=>{
                 <input placeholder='search...' onChange={this.onChangeHandler}></input>
             </div>
 
-           
-            
             <div className='cat-div'>
-                  <div className='cat-1 focused '  contenteditable tabindex="1" onClick={this.forAll_handler}>For All</div>
+                  <div className='cat-1 focused ' contenteditable tabindex="1" onClick={this.forAll_handler}>Special</div>
                   <div className='cat-2 '  contenteditable tabindex="2" onClick={this.valantine_handler}>Valantine's day</div>
-                  <div className='cat-3 '  contenteditable tabindex="3">Mother's day</div>
-                  <div className='cat-4 '  contenteditable tabindex="4">I'm sorry</div>
+                  <div className='cat-3 '  contenteditable tabindex="3" onClick={this.mother_handler}>Mother's day</div>
+                  <div className='cat-4 '  contenteditable tabindex="4"  onClick={this.sorry_handler}>I'm sorry</div>
                 </div>
-                <div className='cat-tab' onClick={this.showCats}>Chose Your Occasions <i class="fas fa-arrow-circle-down "></i></div>
+                <div className='cat-tab'  onClick={this.showCats}>
+               
+                <div className='animate__animated animate__flash animate__infinite	infinite'>Choose Your Occasions</div>
+               
+                </div>
+
             <div className='cards-container' id='cardss'>
               
               {

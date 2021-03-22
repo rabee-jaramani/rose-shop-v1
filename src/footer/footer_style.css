@@ -7,19 +7,17 @@
     padding: 10px 10px;
     height: 2em;
     margin-top: 10000px;
-    background-color:rgb(204, 0, 112);
+    background: linear-gradient(to right, rgba(255, 0, 128, 0.486),rgb(255, 0, 76));
 }
 .flex1,.flex2{
     width: 50%;
     display: flex;
     justify-content: space-evenly;
-    /* margin-left: 50%; */
-    /* transform: translate(-50%); */
 }
 .footer i{
     color: white;
     font-size: 20px;
-
+    cursor: pointer;
 }
 .footer div{
     color: white;

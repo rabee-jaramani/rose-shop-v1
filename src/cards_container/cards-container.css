@@ -25,8 +25,8 @@
     height: 100%;
 }
 .cat-tab{
-    background: linear-gradient(to right, rgb(255, 0, 128),rgb(255, 0, 76));
-    color: white;
+    background:rgb(221, 221, 221);
+    color: rgb(204, 0, 112);
     width: 15em;
     margin-top: -40px;
     margin-left: 50%;
@@ -38,6 +38,7 @@
     cursor: pointer;
     transition: .5s;
 }
+
 .cat-tab:hover{
     background: linear-gradient(to right, rgb(255, 255, 255),rgb(255, 0, 76));
     color: rgb(83, 83, 83);
@@ -45,10 +46,8 @@
 .move-cat-tab{
     margin-top: 0px;
 }
-.move-cat-tab-i{
-    transition: .5s;
-    transform: rotate(180deg);
-}
+
+
 .cat-div{
     
     position: relative;
