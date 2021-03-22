@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactPlayer from "react-player"
 export default function EVENTS() {
+    setTimeout(()=>{document.querySelector('.hdr-msg-div').classList.add('hide')},0) 
+    document.querySelector('.body').classList.add('change-bk');
     return (
         <div className='events1'>
         <div className='events-title'>Recent Events</div>

@@ -170,10 +170,9 @@ left:25%;
          grid-auto-rows: minmax(310px, 360px);
      }
      .cat-tab{
-        font-size: 10px;
         margin-top: -25px;
     }
-    .cat-tab i{
+    .cat-tab div{
         font-size: 10px;
        
 

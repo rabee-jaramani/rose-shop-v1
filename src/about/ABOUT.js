@@ -4,6 +4,8 @@ import sharjah from '../images/sharjah.jpg'
 import abudhabi from '../images/abu-dhabi.jpg'
 
 export default function ABOUT() {
+  setTimeout(()=>{document.querySelector('.hdr-msg-div').classList.add('hide')},0) 
+  document.querySelector('.body').classList.add('change-bk');
     return (
         <>
         <div className='about-container'>

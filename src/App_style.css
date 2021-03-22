@@ -6,7 +6,12 @@ html{
 body{
     background-image: url('./header.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-color: #D8C4AB !important;
+}
+.change-bk{
+   
+    background-image: none !important;
 }

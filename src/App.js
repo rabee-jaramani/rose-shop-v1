@@ -42,6 +42,18 @@ class App extends React.Component {
       total:0
     }
   }
+
+   start_shopping() {
+    document.querySelector('.hdr-msg-div').classList.add('move-up-anim');
+    document.querySelector('.body').classList.add('change-bk');
+    setTimeout(()=>{document.querySelector('.cards-main').classList.add('hide-opacity')},0);
+    document.querySelector('.loading').classList.remove('hide')
+    setTimeout(()=>{document.querySelector('.cards-main').classList.remove('hide-opacity')},2000)
+    setTimeout(()=>{document.querySelector('.loading').classList.add('hide')},2000)
+    
+    setTimeout(()=>{document.querySelector('.hdr-msg-div').classList.add('hide')},1000);
+    setTimeout(()=>{document.querySelector('.hdr-msg-div').classList.remove('move-up-anim');},1000)  
+}
   inc_counter(){
     this.setState({
       counter:this.state.counter+1
@@ -77,12 +89,14 @@ class App extends React.Component {
       <BrowserRouter>
 
     <div className="App">
-    <NAVBAR counter={this.state.counter}/>
+    <NAVBAR counter={this.state.counter}
+    start_shopping={this.start_shopping}
+    />
 
     <LOADING/>
-      <HEADER  path='/' />
-     {/* <HEADER_MESSAGE/> */}
-      <Route path='/' render={props=><HEADER_MESSAGE/>}/>
+      <HEADER/>
+      
+      <Route path='/' render={props=><HEADER_MESSAGE start_shopping={this.start_shopping} />}/>
       <Route  path='/about'  render={props=><ABOUT/> }/>
       <Route  path='/events'  render={props=><EVENTS/>}/>
       <Route  path='/checkout'  render={props=><CHECKOUT

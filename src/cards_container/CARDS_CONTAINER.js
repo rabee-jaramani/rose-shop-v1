@@ -17,6 +17,15 @@ state={
   items_:items,
 }
 
+loading=()=>{
+ // loading
+ setTimeout(()=>{document.querySelector('.cards-container').classList.add('hide-opacity')},0);
+ document.querySelector('.loading').classList.remove('hide')
+ setTimeout(()=>{document.querySelector('.cards-container').classList.remove('hide-opacity')},2000)
+ setTimeout(()=>{document.querySelector('.loading').classList.add('hide')},2000)
+
+}
+
 showCats=(e)=>{
   
   document.querySelector('.cat-tab').classList.toggle('move-cat-tab');
@@ -31,11 +40,14 @@ valantine_handler=()=>{
     items_:valantine_items
   });
   document.querySelector('.cat-1').classList.remove('focused');
+ this.loading();
+    
 }
 sorry_handler=()=>{
   this.setState({
     items_:sorry_items
   });
+  this.loading();
   document.querySelector('.cat-1').classList.remove('focused');
 }
 mother_handler=()=>{
@@ -43,11 +55,13 @@ mother_handler=()=>{
     items_:mother_items
   });
   document.querySelector('.cat-1').classList.remove('focused');
+  this.loading();
 }
-forAll_handler=()=>{
+special_handler=()=>{
   this.setState({
     items_:items
   })
+  this.loading();
 }
   onChangeHandler=(e)=>{
     this.setState({
@@ -57,7 +71,8 @@ forAll_handler=()=>{
   }
 
   componentDidMount(){
-   
+    document.querySelector('.hdr-msg-div').classList.add('hide');
+    document.querySelector('.body').classList.add('change-bk');
   }
     render(){
     return (
@@ -68,7 +83,7 @@ forAll_handler=()=>{
             </div>
 
             <div className='cat-div'>
-                  <div className='cat-1 focused ' contenteditable tabindex="1" onClick={this.forAll_handler}>Special</div>
+                  <div className='cat-1 focused ' contenteditable tabindex="1" onClick={this.special_handler}>Special</div>
                   <div className='cat-2 '  contenteditable tabindex="2" onClick={this.valantine_handler}>Valantine's day</div>
                   <div className='cat-3 '  contenteditable tabindex="3" onClick={this.mother_handler}>Mother's day</div>
                   <div className='cat-4 '  contenteditable tabindex="4"  onClick={this.sorry_handler}>I'm sorry</div>
