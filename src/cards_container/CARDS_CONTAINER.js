@@ -7,7 +7,6 @@ import items from '../items'
 import valantine_items from '../valantine'
 import mother_items from '../mother_day'
 import sorry_items from '../sorry'
-import logo from '../logo/logo.png'
 
 export default class CARDS_CONTAINER extends React.Component {
 
