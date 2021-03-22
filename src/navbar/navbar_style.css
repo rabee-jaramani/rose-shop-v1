@@ -43,7 +43,7 @@
     font-size: 1vw;
     margin-left: 2.5vw;
 }
-.shop:hover,.about:hover,.search:hover,.events:hover,.login:hover{
+.shop:hover,.about:hover,.search:hover,.events:hover,.login:hover,.home:hover{
 /* background-color: rgb(204, 204, 204);
 color: var(--main_color); */
 /* transform: translate(-10px,0); */
@@ -105,7 +105,7 @@ border-bottom: 2px solid white;
         top: -400px;
         transition: all 1s;
     }
-    .navbar-mobile>.shop-m,.about-m,.events-m,.cart-m,.search-m,.login-m{
+    .navbar-mobile>.shop-m,.about-m,.events-m,.cart-m,.search-m,.login-m,.home-m{
         color: white;
         position: absolute;
         bottom: 0;
@@ -116,29 +116,31 @@ border-bottom: 2px solid white;
         color: white;
         font-size: 18px;
     }
-    .shop-m{
+    .home-m{
         bottom: 350px !important;
         left: 50px !important;
     }
-    .about-m{
+    .shop-m{
         bottom: 280px !important;
         left: 80px !important;
     }
-    .events-m{
+    .about-m{
         bottom: 210px !important;
         left: 110px !important;
     }
-    .search-m{
+    .events-m{
         bottom: 140px !important;
         left: 160px !important;
     }
-    .login-m{
-        bottom: 80px !important;
+    .login-m{    
+         bottom: 80px !important;
         left: 230px !important;
+
     }
     .cart-m{
-        bottom: 30px !important;
+         bottom: 30px !important;
         left: 320px !important;
+
     }
     .cart i{
         margin-left: -20px;

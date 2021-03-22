@@ -63,7 +63,9 @@ export default function NAVBAR(props) {
             <i className="fas fa-bars"></i>
             <i className="fas fa-times hide"></i>
         </div>
-        <div className="home-m" onClick={show_shop}><Link className='Link' to='/cards'>Home</Link></div>
+        <div className="home-m" onClick={show_home}><Link className='Link' to='/'>Home</Link></div>
+        <div className="shop-m" onClick={show_shop}><Link className='Link' to='/cards'>Shop</Link></div>
+        
         <div className="about-m" onClick={show_about}><Link className='Link' to='/about'>About</Link></div>
         <div className="events-m" onClick={show_events}><Link className='Link' to='/events'>Events</Link></div>
         {/* <div className="search-m">Search</div> */}
