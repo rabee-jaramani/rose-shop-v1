@@ -204,6 +204,9 @@ left:25%;
     .cat-div div{
         font-size: 10px;
       }
+      .cat-tab{
+          width: 150px;
+      }
 }
 
 @media(max-width:1500px){

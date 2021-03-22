@@ -151,6 +151,7 @@ border-bottom: 2px solid white;
     }
 }
 @media(max-width:418px){
+
     .navbar-mobile{
         right: -145px;
         top: -145px;
@@ -167,19 +168,19 @@ border-bottom: 2px solid white;
         top: -300px;
         transition: all 1s;
     }
-    .shop-m{
+    .home-m{
         bottom: 262.5px !important;
         left: 37.5px !important;
     }
-    .about-m{
+    .shop-m{
         bottom: 210px !important;
         left: 60px !important;
     }
-    .events-m{
+    .about-m{
         bottom: 157.5px !important;
         left: 82.5px !important;
     }
-    .search-m{
+    .events-m{
         bottom: 105px !important;
         left: 120px !important;
     }
