@@ -88,7 +88,7 @@ componentDidMount(){
 
             <div className='cat-div'>
               <div className='cat-1 focused' contenteditable tabindex="1" onClick={this.special_handler}>Special</div>
-              <div className='cat-2' contenteditable tabindex="2" onClick={this.valantine_handler}>Valantine's day</div>
+              <div className='cat-2' contenteditable tabindex="2" onClick={this.valantine_handler}>Valantine</div>
               <div className='cat-3' contenteditable tabindex="3" onClick={this.mother_handler}>Mother's day</div>
               <div className='cat-4' contenteditable tabindex="4"  onClick={this.sorry_handler}>I'm sorry</div>
               <div className='cat-5' contenteditable tabindex="5"  onClick={this.see_all}>See All</div>
