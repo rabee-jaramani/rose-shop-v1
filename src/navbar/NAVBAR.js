@@ -51,7 +51,7 @@ export default function NAVBAR(props) {
         <div className="events" onClick={show_events}><Link className='Link' to='/events'>Events</Link></div>
         {/* <Link className='search' to='/cards'>linkkkkkkk</Link> */}
         {/* <div className="search">Search</div> */}
-        <div className="login">Log In</div>
+        {/* <div className="login">Log In</div> */}
         <div className="cart" onClick={close_cart_menu}>
         <div className="cart-counter">{props.counter}</div>
         <i className="fas fa-shopping-cart"></i>
@@ -69,7 +69,7 @@ export default function NAVBAR(props) {
         <div className="about-m" onClick={show_about}><Link className='Link' to='/about'>About</Link></div>
         <div className="events-m" onClick={show_events}><Link className='Link' to='/events'>Events</Link></div>
         {/* <div className="search-m">Search</div> */}
-        <div className="login-m">Log In</div>
+        {/* <div className="login-m">Log In</div> */}
         <div className="cart-m">
             <div className="cart-counter">{props.counter}</div>
             <i className="fas fa-shopping-cart"></i>
