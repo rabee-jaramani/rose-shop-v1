@@ -22,18 +22,18 @@ const [country, setCountry] = useState('')
 //get cities from data depending on user selection
 const [cities, setCities] = useState([]);
 
- function get_countries(){
-      var result=[];
-            for(var i in JSON1){
-                result.push([i, JSON1[i]]);
-            }
-            setData(result);
-            var list_cnt=[];
-            for(var j=0;j<result.length;j++){
-              list_cnt.push(result[j][0]);
-            }
-            setCountries(list_cnt);
-  }
+function get_countries(){
+    var result=[];
+          for(var i in JSON1){
+              result.push([i, JSON1[i]]);
+          }
+          setData(result);
+          var list_cnt=[];
+          for(var j=0;j<result.length;j++){
+            list_cnt.push(result[j][0]);
+          }
+          setCountries(list_cnt);
+}
 
     function citiesHandler() {
             var ctsss=[]
@@ -150,14 +150,14 @@ const [cities, setCities] = useState([]);
 
 
                    {/* /////////////////////////////////////// */}
-                        <select id='country' onClick={get_countries}  onChange={e=>setCountry(e.target.value)}>
+                        <select id='country' onClick={get_countries} onMouseOver={get_countries}  onChange={e=>setCountry(e.target.value)}>
                         <option className='dropdown-placeholder' value="" disabled selected>Select your country</option>
                             {countries.map((country)=>{
                             return <option > {country} </option>
                             })}              
                         </select>
 
-                        <select id='city' onClick={citiesHandler}>
+                        <select id='city' onClick={citiesHandler} onMouseOver={citiesHandler}>
                         <option className='dropdown-placeholder' value="" disabled selected>Select your city</option>
                         {  cities.map((city)=>{ return<option>{city}  </option> })    }         
                         </select> 

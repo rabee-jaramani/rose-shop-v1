@@ -15,7 +15,7 @@ import './events/events_style.css'
 import './loading/loading_style.css'
 import './footer/footer_style.css'
 import 'react-credit-cards/es/styles-compiled.css'
-import './credit-card/credit_card_style.css'
+import './checkout/checkout_style.css'
 
 
 // import {$} from 'react-jquery-plugin'
@@ -30,7 +30,7 @@ import ABOUT from './about/ABOUT';
 import EVENTS from './events/EVENTS';
 import LOADING from './loading/LOADING';
 import FOOTER from './footer/FOOTER';
-import CHECKOUT from './credit-card/CHECKOUT';
+import CHECKOUT from './checkout/CHECKOUT';
 
 
 class App extends React.Component {
